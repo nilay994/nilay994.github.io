@@ -121,3 +121,17 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 ```
 The final element.
 ```
+
+
+### My clipboard:
+https://github.com/lexoyo/jekyll-slideshow
+bundle exec jekyll serve --livereload
+
+Line of thinking: wix required too much work.. instead I could just code and get it done..
++ github familiar
++ markdown.. + static website
++ free!!
+
+- wix was too professional
+- could take longer to load
+- not free, weird domain name..
