@@ -1,6 +1,8 @@
-title: nilay994
+title: I make good robots
 logo: /assets/img/profile-picture.jpg
 description: embedded engineer
 show_downloads: true
 google_analytics: UA-177345932-1
 theme: jekyll-theme-minimal
+plugins: 
+  - jemoji
