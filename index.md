@@ -1,5 +1,7 @@
 ---
 layout: default
+image_sliders:
+  - slider1
 ---
 
 A **researcher** employed by TU Delft, the Netherlands for making drones fly faster than ever.  
@@ -15,3 +17,9 @@ Nice to meet you! Nicer in person - D**3
 [Publications page](./publications.html)
 
 [Dump page](./dump.html)
+
+{% include slider.html selector="slider1" %}
+
+
+
+

@@ -4,5 +4,10 @@ description: embedded engineer
 show_downloads: true
 google_analytics: UA-177345932-1
 theme: jekyll-theme-minimal
+# markdown: kramdown
+exclude:
+- Gemfile
+- Gemfile.lock
 plugins: 
   - jemoji
+  - jekyll-feed

@@ -7,7 +7,8 @@ _yay_
 
 ### MAVLab, TU Delft Aerospace engineering
 1. AlphaPilot: Make drones fly at the limits of flight to finish a race in the shortest time, autonomously. Won **$1M** competiting against 400 research groups around the world.  
-2. PercEvite: Sense and Avoid for small + unmanned aerial vehicles. Each drone is its own Air Traffic control. 
+2. PercEvite: Sense and Avoid for small + unmanned aerial vehicles. Each drone is its own Air Traffic control.
+
 
 
 ### PocketCube, TU Delft Space department
