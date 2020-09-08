@@ -3,60 +3,59 @@
   captions: true
   images:
     - src: /img/1.jpg
-      alt: A million dollars for the fastest AI racing robot
+      alt: We are the champions! © Drone Racing League
       href: https://www.tudelft.nl/en/2019/tu-delft/mavlab-world-champion-in-airr-autonomous-drone-race-2019/
     - data-src: /img/2.jpg
       alt: 14 hour work weeks!
-    # - data-src: /img/3.jpg
-    #   data-src-2x: /img/3@2x.jpg
-    #   alt: Use data-src-2x for HiDPI devices
+      href: https://markets.businessinsider.com/news/stocks/lockheed-martin-drone-racing-league-announce-a-i-robotic-racing-circuit-champions-give-team-1-million-cash-prize-for-fastest-autonomous-racing-drone-1028747953#
     - src: /img/3.jpg
       alt: AIRR trophy
+      href: https://www.wired.com/story/coders-versus-human-pilots-drone-race/
     - src: /img/5.jpg
-      alt: Race track at Washington DC
+      alt: Race track at Washington DC. © Drone Racing League
+      href: https://www.lockheedmartin.com/en-us/news/events/ai-innovation-challenge.html
     - src: /img/6.jpg
-      alt: HIL setup
+      alt: HIL setup © Drone Racing League
   settings:
-    height: 400
+    height: "'auto'"
     initialHeight:
     maxHeight:
-    interval:
+    interval: 12000
     transitionDuration:
-    effect:
-    disableNav:
-    keyboardNav:
+    effect: "'slide'"
+    disableNav: false
+    keyboardNav: true
     previousNavSelector:
     nextNavSelector:
 
 - selector: slider2
-  bullets: true
+  bullets: false
   captions: true
   images:
-    - src: /img/1.jpg
-      title: Balloons!
-      alt: This slider has caption titles
-    - data-src: /img/2.jpg
-      title: This slider uses the fade effect
-      alt: Instead of the default slide effect
-    - data-src: /img/3.jpg
-      data-src-2x: /img/3@2x.jpg
-    - src: /img/4.jpg
-      title: Last image had no caption!
-      alt: Also, this image has no link
+    - src: /img/9.jpg
+      alt: Sense and Avoid for small drones. © MAVLab
+      href: https://www.percevite.org
+    - data-src: /img/8.png
+      alt: Outdoor flights on Paparazzi Autopilot. © MAVLab
+      href: https://github.com/tudelft/paparazzi/tree/percevite_wifi
+    - data-src: /img/10.png
+      alt: HiL simulations of conflict resolutions. © MAVLab
+      href: https://github.com/nilay994/velobs/blob/master/nps-paparazzi/README.md
   settings:
     height: "'auto'"
-    effect: "'fade'"
+    initialHeight:
+    maxHeight:
+    interval: 12000
+    transitionDuration:
+    effect: "'slide'"
+    disableNav: false
+    keyboardNav: true
+    previousNavSelector:
+    nextNavSelector:
 
-- selector: slider3
-  images:
-    - src: /img/1.jpg
-      alt: image one
-    - src: /img/2.jpg
-      alt: image two
-    - src: /img/3.jpg
-      alt: image three
-    - src: /img/4.jpg
-      alt: image four
-  settings:
-    height: "'auto'"
-    disableNav: true
+
+
+
+    # - data-src: /img/3.jpg
+    #   data-src-2x: /img/3@2x.jpg
+    #   alt: Use data-src-2x for HiDPI devices

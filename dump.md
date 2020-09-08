@@ -1,10 +1,6 @@
 ---
 layout: default
-image_sliders:
-  - slider1
 ---
-
-{% include slider.html selector="slider1" %}
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 

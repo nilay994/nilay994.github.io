@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## publications page
+## publications
 _yay_
 
 ### news
