@@ -54,6 +54,30 @@
     nextNavSelector:
 
 
+- selector: slider3
+  bullets: false
+  captions: true
+  images:
+    - src: /img/15.jpg
+      alt: Drivetrain with Talon SRX © FRC6024
+      href: https://www.onshape.com/robots-to-the-rescue
+    - data-src: /img/16.jpg
+      alt: Robots at Sydney Olympic Park © FRC6024
+      href: https://github.com/tudelft/paparazzi/tree/percevite_wifi
+    - data-src: /img/17.jpg
+      alt: Team picture!
+  settings:
+    height: "'auto'"
+    initialHeight:
+    maxHeight:
+    interval: 12000
+    transitionDuration:
+    effect: "'slide'"
+    disableNav: false
+    keyboardNav: true
+    previousNavSelector:
+    nextNavSelector:
+
 
 
     # - data-src: /img/3.jpg
