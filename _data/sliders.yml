@@ -3,15 +3,19 @@
   captions: true
   images:
     - src: /img/1.jpg
-      alt: Minimum required attributes
+      alt: A million dollars for the fastest AI racing robot
+      href: https://www.tudelft.nl/en/2019/tu-delft/mavlab-world-champion-in-airr-autonomous-drone-race-2019/
     - data-src: /img/2.jpg
-      alt: Use data-src for on-demand loading
-    - data-src: /img/3.jpg
-      data-src-2x: /img/3@2x.jpg
-      alt: Use data-src-2x for HiDPI devices
-    - src: /img/4.jpg
-      alt: Links work too
-      href: https://github.com/jekylltools/jekyll-ideal-image-slider-include
+      alt: 14 hour work weeks!
+    # - data-src: /img/3.jpg
+    #   data-src-2x: /img/3@2x.jpg
+    #   alt: Use data-src-2x for HiDPI devices
+    - src: /img/3.jpg
+      alt: AIRR trophy
+    - src: /img/5.jpg
+      alt: Race track at Washington DC
+    - src: /img/6.jpg
+      alt: HIL setup
   settings:
     height: 400
     initialHeight:
