@@ -71,13 +71,19 @@ Position: team captain, International Robocon 2014
 
 * * *
 
-### What got me here
+### TODO: archived!
 1. Show the 8th std diagram
 2. APAS
 3. Grid warrior
 4. MIT Media
 5. TIIC-IDC
 6. legorative board somewhere (internet name)?
+
+* * *
+
+
+### *Projects at*
+![projects at](img/world_map.png)
 
 
 
