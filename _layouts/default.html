@@ -22,18 +22,18 @@
         <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
         {% endif %}
 
-        {% if site.show_downloads %}
-        <ul class="downloads">
-          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+        <ul class="navbar">
+          <li><a href="index.html">home</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="publications.html">publications</a></li>
         </ul>
-        {% endif %}
-        
-        <li><a href="index.html"><strong>about</strong></a></li>
-        <li><a href="projects.html"><strong>projects</strong></a></li>
-        <li><a href="publications.html"><strong>publications</strong></a></li>
 
+        <ul class="download_resume">
+          <li><a href="img/nilay-resume.pdf" target="_blank">View <strong>Resume as PDF</strong></a></li>
+        </ul>
+
+        <!-- <div style="padding:1em 0;"> Local time in the Netherlands <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Europe%2FAmsterdam&show=hour_minute" width="100%" height="90" frameborder="0" seamless></iframe> </div> -->
+        
       </header>
       <section>
 
@@ -41,6 +41,13 @@
 
       </section>
       <footer>
+        Was quite straightforward to make this static webpage after minor tweaks. Feel free to download the source below.
+        {% if site.show_downloads %}
+        <ul class="downloads">
+          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+        </ul>
+        {% endif %}
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
@@ -58,6 +65,22 @@
       ga('send', 'pageview');
     </script>
     {% endif %}
+
+    <script>
+      // Add active class to the current button (highlight it)
+      var header = document.getElementById("myDIV");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) { 
+          current[0].className = current[0].className.replace(" active", "");
+        }
+        this.className += " active";
+        });
+      }
+    </script>
+
     {% include slider_styles.html %}
     {% include slider_scripts.html %}
   </body>

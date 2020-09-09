@@ -8,7 +8,7 @@ An **engineer** who can glue things together. Connecting sensors and processors,
 Far from "Give me a lever and I will move the world" but closer to "Give me an ARM processor and I will make the project work".
 Linux user, can help you exit VIM. 
 
-Nice to meet you here! Nicer in person - D**3
+Nice to meet you. Nicer in person - D<sup>3</sup>
 
 [Projects](./projects.html)
 

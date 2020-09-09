@@ -128,13 +128,24 @@
   captions: true
   images:
     - src: /img/51.jpg
-      alt: Getting ready for assembly
+      alt: Lego Porsche ready for assembly
     - src: /img/52.jpg
       alt: Drivetrain
     - src: /img/53.jpg
       alt: Chassis
     - src: /img/54.jpg
       alt: Powered by esp32? why not
+    - src: /img/55.jpg
+      alt: arduino-clone kicad gerber view
+      href: https://github.com/nilay994/arduino-clone-kicad
+    - src: /img/56.jpg
+      alt: MIT Media Labs, Imaging experiences track
+    - src: /img/57.jpg
+      alt: MIT Media Labs, ideation of pano-band
+      href: https://www.youtube.com/watch?v=V2vUxHSrBw0
+    - src: /img/58.jpg
+      alt: Wrist watch multimeter at Texas Instruments Challenge
+
 
   settings:
     height: "'auto'"
