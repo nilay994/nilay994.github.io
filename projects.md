@@ -4,20 +4,25 @@ image_sliders:
   - slider1
   - slider2
   - slider3
+  - slider4
+  - slider5
+  - slider6
 ---
 
 ## Projects
-_yay_
+
+*Some pictures in the galllery below are hyperlinked, so might have to click away! :P*
 
 * * *
 
 ### MAVLab, TU Delft's Aerospace faculty (2019-current)
-Position: Researcher
-1. AlphaPilot: Make drones fly at the limits of flight to finish a race in the shortest time, autonomously. Won **$1M** competiting against 400 research groups around the world. Control, Embedded Systems, Path planning and State estimation.
+Position: Researcher responsible for *Control, Embedded Systems, Path planning and State estimation*. 
+
+AlphaPilot: Make drones fly at the limits of flight to finish a race in the shortest time, autonomously. Won **$1M** competiting against 400 research groups around the world. This challenge is introduced for staging AI against the top-most drone pilots of the world. The competition not only evaluates the competitive-ness of the deployed algorithms, but also gives researchers a chance to change the perspective of the pre-existing sport. This change of perspective towards a game took place earlier when DeepMind's AlphaGo beat the world champion Lee Sedol in 2016. Computers are capable of making decisions which are rather unanticipated by humans but in the end have a higher probability of winning. Such unconventional moves have led to a complete change of perspective in the 300 year old game of Go. AlphaPilot poses a slightly different technical challenge as compared to these game based AI algorithms by the introduction of real-world robot dynamics. While trying to increase the probability of winning, it must send tireless continuous millisecond signals which are not only responsible for making them fly the fastest, but also for fighting against pseudo forces, drag and gravity to maintain their stable "upside-up" configuration.
 
 {% include slider.html selector="slider1" %} 
 
-2. PercEvite: Sense and Avoid for small + unmanned aerial vehicles. Each drone is its own Air Traffic control. Project under Single European Sky Initiative (SESAR).
+PercEvite: Sense and Avoid for small + unmanned aerial vehicles. Each drone is its own Air Traffic control. Project under Single European Sky Initiative (SESAR).
 
 {% include slider.html selector="slider2" %} 
 
@@ -48,7 +53,8 @@ Contributing to the firmware development of the famous [esp-idf](https://github.
 - Worked on SPI Master Slave bugs on the older ESP8266
 - Motor Control Drivers: BLDC, brushed, stepper, servo
 - Amazon Web Services MQTT-IoT
-- TODO: add gallery
+
+{% include slider.html selector="slider4" %}
 
 * * *
 
@@ -67,7 +73,8 @@ Position: team captain, International Robocon 2014
 - Prototyped 4 robots throughout the build season
 - Control Systems, PCB layouts, Embedded Programming, Pneumatics
 - Earned money for robot parts and practice arena by conducting embedded systems workshops
-- TODO: add gallery
+
+{% include slider.html selector="slider5" %}
 
 * * *
 
@@ -81,10 +88,15 @@ Position: team captain, International Robocon 2014
 
 * * *
 
-
 ### *Projects at*
 ![projects at](img/world_map.png)
 
+* * *
 
+### The recent Lego Porsche!
+
+{% include slider.html selector="slider6" %}
+
+* * *
 
 [back](./)

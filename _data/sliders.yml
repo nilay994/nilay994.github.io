@@ -5,7 +5,7 @@
     - src: /img/1.jpg
       alt: We are the champions! © Drone Racing League
       href: https://www.tudelft.nl/en/2019/tu-delft/mavlab-world-champion-in-airr-autonomous-drone-race-2019/
-    - data-src: /img/2.jpg
+    - src: /img/2.jpg
       alt: 14 hour work weeks!
       href: https://markets.businessinsider.com/news/stocks/lockheed-martin-drone-racing-league-announce-a-i-robotic-racing-circuit-champions-give-team-1-million-cash-prize-for-fastest-autonomous-racing-drone-1028747953#
     - src: /img/3.jpg
@@ -35,10 +35,10 @@
     - src: /img/9.jpg
       alt: Sense and Avoid for small drones. © MAVLab
       href: https://www.percevite.org
-    - data-src: /img/8.png
+    - src: /img/8.png
       alt: Outdoor flights on Paparazzi Autopilot. © MAVLab
       href: https://github.com/tudelft/paparazzi/tree/percevite_wifi
-    - data-src: /img/10.png
+    - src: /img/10.png
       alt: HiL simulations of conflict resolutions. © MAVLab
       href: https://github.com/nilay994/velobs/blob/master/nps-paparazzi/README.md
   settings:
@@ -61,10 +61,10 @@
     - src: /img/15.jpg
       alt: Drivetrain with Talon SRX © FRC6024
       href: https://www.onshape.com/robots-to-the-rescue
-    - data-src: /img/16.jpg
+    - src: /img/16.jpg
       alt: Robots at Sydney Olympic Park © FRC6024
       href: https://github.com/tudelft/paparazzi/tree/percevite_wifi
-    - data-src: /img/17.jpg
+    - src: /img/17.jpg
       alt: Team picture!
   settings:
     height: "'auto'"
@@ -78,6 +78,75 @@
     previousNavSelector:
     nextNavSelector:
 
+
+- selector: slider4
+  bullets: false
+  captions: true
+  images:
+    - src: /img/33.jpg
+      alt: ESP32 during HMI development
+    - src: /img/34.jpg
+      alt: ESP32 connected to AWS!!
+    - src: /img/35.jpg
+      alt: ESP32 DevKit © Espressif Systems
+  settings:
+    height: "'auto'"
+    initialHeight:
+    maxHeight:
+    interval: 12000
+    transitionDuration:
+    effect: "'slide'"
+    disableNav: false
+    keyboardNav: true
+    previousNavSelector:
+    nextNavSelector:
+
+- selector: slider5
+  bullets: false
+  captions: true
+  images:
+    - src: /img/45.jpg
+      alt: Our robots getting ready for a match © SRA, VJTI
+    - src: /img/41.jpg
+      alt: Parade before the competition
+    - src: /img/42.jpg
+      alt: Panasonic Award for innovation!
+  settings:
+    height: "'auto'"
+    initialHeight:
+    maxHeight:
+    interval: 12000
+    transitionDuration:
+    effect: "'slide'"
+    disableNav: false
+    keyboardNav: true
+    previousNavSelector:
+    nextNavSelector:
+
+- selector: slider6
+  bullets: false
+  captions: true
+  images:
+    - src: /img/51.jpg
+      alt: Getting ready for assembly
+    - src: /img/52.jpg
+      alt: Drivetrain
+    - src: /img/53.jpg
+      alt: Chassis
+    - src: /img/54.jpg
+      alt: Powered by esp32? why not
+
+  settings:
+    height: "'auto'"
+    initialHeight:
+    maxHeight:
+    interval: 12000
+    transitionDuration:
+    effect: "'slide'"
+    disableNav: false
+    keyboardNav: true
+    previousNavSelector:
+    nextNavSelector:
 
 
     # - data-src: /img/3.jpg
