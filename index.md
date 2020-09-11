@@ -14,7 +14,7 @@ Nice to meet you. Nicer in person - D<sup>3</sup>
 
 [Publications](./publications.html)
 
-[Dump](./dump.html)
+[happy birthday mom!](./wish.html)
 
 
 
