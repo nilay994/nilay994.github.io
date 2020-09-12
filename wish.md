@@ -14,9 +14,12 @@ Thank you for being the most loving and caring person anyone has ever met. I am 
 
 For you! :notes:
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/DHyRikMZXqw" frameborder="0" allowfullscreen></iframe>
+<div class="video"> <figure> <iframe width="640" height="480" src="//www.youtube.com/embed/DHyRikMZXqw" frameborder="0" allowfullscreen></iframe> </figure> </div>
 
-<br /> <br /> <br /> 
+[Song 1](https://www.youtube.com/watch?DHyRikMZXqw)
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/z-3aAc53QWU" frameborder="0" allowfullscreen></iframe>
+<div class="video"> <figure> <iframe width="640" height="480" src="//www.youtube.com/embed/z-3aAc53QWU" frameborder="0" allowfullscreen></iframe> </figure> </div>
+
+[Song 2](https://www.youtube.com/watch?z-3aAc53QWU)
+
 

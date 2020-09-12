@@ -17,7 +17,7 @@
     - src: /img/6.jpg
       alt: HIL setup © Drone Racing League
   settings:
-    height: "'auto'"
+    height: "'16:9'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -42,7 +42,7 @@
       alt: HiL simulations of conflict resolutions. © MAVLab
       href: https://github.com/nilay994/velobs/blob/master/nps-paparazzi/README.md
   settings:
-    height: "'auto'"
+    height: "'16:9'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -67,7 +67,7 @@
     - src: /img/17.jpg
       alt: Team picture!
   settings:
-    height: "'auto'"
+    height: "'16:9'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -83,14 +83,14 @@
   bullets: false
   captions: true
   images:
-    - src: /img/33.jpg
+    - src: /img/33.png
       alt: ESP32 during HMI development
     - src: /img/34.jpg
       alt: ESP32 connected to AWS!!
     - src: /img/35.jpg
       alt: ESP32 DevKit © Espressif Systems
   settings:
-    height: "'auto'"
+    height: "'16:9'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -105,14 +105,14 @@
   bullets: false
   captions: true
   images:
-    - src: /img/45.jpg
+    - src: /img/45.png
       alt: Our robots getting ready for a match © SRA, VJTI
     - src: /img/41.jpg
       alt: Parade before the competition
-    - src: /img/42.jpg
+    - src: /img/42.png
       alt: Panasonic Award for innovation!
   settings:
-    height: "'auto'"
+    height: "'16:9'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -146,7 +146,7 @@
     - src: /img/58.jpg
       alt: Wrist watch multimeter at Texas Instruments Challenge
   settings:
-    height: "'auto'"
+    height: "'16:9'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -170,7 +170,7 @@
     - src: /img/107.jpeg
     - src: /img/108.jpeg
   settings:
-    height: "'auto'"
+    height: "'16:9'"
     initialHeight:
     maxHeight:
     interval: 2000

@@ -11,3 +11,4 @@ exclude:
 plugins: 
   - jemoji
   - jekyll-feed
+#  - jekyll-youtube

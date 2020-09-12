@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: pages
 ---
 
 ## publications
@@ -37,7 +37,7 @@ An efficient modeling of motor drivers using an H Bridge configuration driven by
 
 - Add AlphaPilot: Bloomberg, WIRED, Business Insider, Lockheed Martin
 
-![We qualify through nationals!](img/64.jpg)
+![We qualify through the national league!](img/64.png)
 
 ![We go international!](img/62.jpg)
 
