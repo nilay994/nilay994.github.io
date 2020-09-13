@@ -17,7 +17,7 @@ image_sliders:
 ***Some pictures in the slides below are hyperlinked, so click away on the moving pictures if you like the project! :P***
 
 * * *
- <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br />
 
 ### MAVLab, TU Delft's Aerospace faculty (2019-current)
 Position: Researcher responsible for *Control, Embedded Systems, Path planning and State estimation*. 
@@ -31,7 +31,7 @@ AlphaPilot: Make drones fly at the limits of flight to finish a race in the shor
 {% include slider.html selector="slider2" %} 
 
 * * *
- <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br /> 
 
 ### PocketCube, TU Delft Space Institute (2018)
 Position: Part time engineer
@@ -45,7 +45,7 @@ Implemented [detumbling algorithms](https://github.com/nilay994/detumble) using 
 *PocketCube Workshop Delft*
 
 * * *
- <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br /> 
 
 ### Espressif, Shanghai (2016 - 2017)
 Position: Firmware / Applications engineer
@@ -63,7 +63,7 @@ Contributing to the firmware development of the famous [esp-idf](https://github.
 {% include slider.html selector="slider4" %}
 
 * * *
- <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br /> 
 
 ### FIRST Robotics Stronghold, Sydney (2016)
 Position: Coach of the team [FRC6024](http://rfactor6024.com/), representing India internationally once more!
@@ -73,7 +73,7 @@ Position: Coach of the team [FRC6024](http://rfactor6024.com/), representing Ind
 {% include slider.html selector="slider3" %}
 
 * * *
- <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br /> 
 
 ### Robocon, Asia Pacific region (2013 - 2016)
 Position: team captain, International Robocon 2014
@@ -85,7 +85,7 @@ Position: team captain, International Robocon 2014
 {% include slider.html selector="slider5" %}
 
 * * *
- <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br /> 
 
 ### archived projects
 1. Show the 8th std diagram
@@ -95,6 +95,8 @@ Position: team captain, International Robocon 2014
 {% include slider.html selector="slider6" %}
 
 * * *
- <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br /> 
+
+[publications](./publications.html)
 
 [back](./)

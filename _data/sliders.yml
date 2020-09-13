@@ -2,7 +2,7 @@
   bullets: false
   captions: true
   images:
-    - src: /img/1.jpg
+    - src: /img/1.png
       alt: We are the champions! © Drone Racing League
       href: https://www.tudelft.nl/en/2019/tu-delft/mavlab-world-champion-in-airr-autonomous-drone-race-2019/
     - src: /img/2.jpg
@@ -145,6 +145,10 @@
       href: https://www.youtube.com/watch?v=V2vUxHSrBw0
     - src: /img/58.jpg
       alt: Wrist watch multimeter at Texas Instruments Challenge
+    - src: /img/59.jpg
+      alt: and old self-parking car prototype
+    - src: /img/60.png
+      alt: grid solving robot
   settings:
     height: "'16:9'"
     initialHeight:

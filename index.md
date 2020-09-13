@@ -10,9 +10,9 @@ Linux user, can help you exit VIM.
 
 Nice to meet you. Nicer in person - D<sup>3</sup>
 
-[Projects](./projects.html)
+[projects](./projects.html)
 
-[Publications](./publications.html)
+[publications](./publications.html)
 
 <!-- [happy birthday mom!](./wish.html) -->
 

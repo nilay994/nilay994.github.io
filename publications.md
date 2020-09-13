@@ -5,8 +5,6 @@ layout: pages
 ## publications
 _yay_
 
-* * *
- <br /> <br /> <br /> <br /> <br /> <br />
 
 ### papers
 (1) [control for autonomous drone racing](https://repository.tudelft.nl/islandora/object/uuid%3A99f41ef5-f2c9-4a0a-9b89-0245e106f6de)
@@ -22,7 +20,7 @@ Motivated by the looming radio frequency spectrum crisis, this project aims at d
 An efficient modeling of motor drivers using an H Bridge configuration driven by charge pumps controlled by embedded components is presented. N-channel MOSFETs and charge pumps together eliminate the problems of Dead time of MOSFETs and High values of RDS (ON). The embedded system using an ATMEL microcontroller drives the load and monitors the load voltages and input PWM to establish a closed loop system by comparing it with the stored threshold state space parameters of the motor, also in turn preventing MOSFET damage by synchronized control over the gates. Charge pump readings have been reported along with feedback readings for the microcontroller. Results obtained are in range with expected outputs.
 
 * * *
- <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br />
 
 ### clubs
 1. [Society of Robotics and Automation](sra.vjti.info)
@@ -31,12 +29,13 @@ An efficient modeling of motor drivers using an H Bridge configuration driven by
 4. Also, posses a :golf: club
 
 * * *
- <br /> <br /> <br /> <br /> <br /> <br />
+ <br /> <br /> <br /> 
 
 ### news
 
-- Add AlphaPilot: Bloomberg, WIRED, Business Insider, Lockheed Martin
-
+- AlphaPilot challenge: [Business Insider](https://markets.businessinsider.com/news/stocks/lockheed-martin-drone-racing-league-announce-a-i-robotic-racing-circuit-champions-give-team-1-million-cash-prize-for-fastest-autonomous-racing-drone-1028747953#), [Lockheed Martin](https://www.lockheedmartin.com/en-us/news/events/ai-innovation-challenge.html), [WIRED magazine](https://www.wired.com/story/coders-versus-human-pilots-drone-race/), [Bloomberg](https://www.bloomberg.com/news/videos/2018-09-05/lockheed-martin-looks-to-drone-racing-for-the-next-advance-in-ai-video), 
+<br /> <br />
+- Robocon
 ![We qualify through the national league!](img/64.png)
 
 ![We go international!](img/62.jpg)
@@ -46,5 +45,6 @@ An efficient modeling of motor drivers using an H Bridge configuration driven by
 
 2. add nhk radio JP + dd unlisted youtube.
 
+[projects](./projects.html)
 
 [back](./)
