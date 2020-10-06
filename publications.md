@@ -34,6 +34,8 @@ An efficient modeling of motor drivers using an H Bridge configuration driven by
 ### news
 
 - AlphaPilot challenge: [Business Insider](https://markets.businessinsider.com/news/stocks/lockheed-martin-drone-racing-league-announce-a-i-robotic-racing-circuit-champions-give-team-1-million-cash-prize-for-fastest-autonomous-racing-drone-1028747953#), [Lockheed Martin](https://www.lockheedmartin.com/en-us/news/events/ai-innovation-challenge.html), [WIRED magazine](https://www.wired.com/story/coders-versus-human-pilots-drone-race/), [Bloomberg](https://www.bloomberg.com/news/videos/2018-09-05/lockheed-martin-looks-to-drone-racing-for-the-next-advance-in-ai-video), 
+![World champions!](img/65.png)
+
 <br /> <br />
 - Robocon
 ![We qualify through the national league!](img/64.png)
