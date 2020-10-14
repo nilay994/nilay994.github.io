@@ -1,5 +1,5 @@
 - selector: slider1
-  bullets: false
+  bullets: true
   captions: true
   images:
     - src: /img/1.png
@@ -29,7 +29,7 @@
     nextNavSelector:
 
 - selector: slider2
-  bullets: false
+  bullets: true
   captions: true
   images:
     - src: /img/9.jpg
@@ -55,7 +55,7 @@
 
 
 - selector: slider3
-  bullets: false
+  bullets: true
   captions: true
   images:
     - src: /img/15.jpg
@@ -80,7 +80,7 @@
 
 
 - selector: slider4
-  bullets: false
+  bullets: true
   captions: true
   images:
     - src: /img/33.png
@@ -102,7 +102,7 @@
     nextNavSelector:
 
 - selector: slider5
-  bullets: false
+  bullets: true
   captions: true
   images:
     - src: /img/45.png
@@ -124,7 +124,7 @@
     nextNavSelector:
 
 - selector: slider6
-  bullets: false
+  bullets: true
   captions: true
   images:
     - src: /img/51.jpg
@@ -164,7 +164,7 @@
 
 
 - selector: slider7
-  bullets: false
+  bullets: true
   captions: true
   images:
     - src: /img/101.png
