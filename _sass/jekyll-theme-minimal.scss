@@ -2,7 +2,7 @@
 @import "rouge-github";
 
 body {
-  background-color: #fff;
+  background-color: #e9e9e9;
   padding:50px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
@@ -58,6 +58,7 @@ a:hover small {
 .wrapper {
   width:860px;
   margin:0 auto;
+  text-align: justify;
 }
 
 blockquote {
@@ -161,7 +162,7 @@ ul.downloads {
 }
 
 section {
-  width:500px;
+  width:550px;
   float:right;
   padding-bottom:50px;
 }
