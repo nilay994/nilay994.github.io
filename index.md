@@ -2,6 +2,8 @@
 layout: default
 ---
 
+ <br /> <br /> <br />
+
 A **researcher** employed by TU Delft, the Netherlands for making drones fly faster than ever.  
 
 An **engineer** who can glue things together. Connecting sensors and processors, soldering them (but) sometimes double sided tape or super-glue solves it all.
