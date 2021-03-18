@@ -2,22 +2,22 @@
   bullets: true
   captions: true
   images:
-    - src: /img/1.png
+    - src: img/1.jpg
       alt: We are the champions! © Drone Racing League
       href: https://www.tudelft.nl/en/2019/tu-delft/mavlab-world-champion-in-airr-autonomous-drone-race-2019/
-    - src: /img/2.jpg
-      alt: 14 hour work weeks!
+    - src: img/2.jpg
+      alt: at work!
       href: https://markets.businessinsider.com/news/stocks/lockheed-martin-drone-racing-league-announce-a-i-robotic-racing-circuit-champions-give-team-1-million-cash-prize-for-fastest-autonomous-racing-drone-1028747953#
-    - src: /img/3.jpg
+    - src: img/3.jpg
       alt: AIRR trophy
       href: https://www.wired.com/story/coders-versus-human-pilots-drone-race/
-    - src: /img/5.jpg
-      alt: Race track at Washington DC. © Drone Racing League
+    - src: img/5.jpg
+      alt: Race track at Washington DC ©DRL
       href: https://www.lockheedmartin.com/en-us/news/events/ai-innovation-challenge.html
-    - src: /img/6.jpg
+    - src: img/6.jpg
       alt: HIL setup © Drone Racing League
   settings:
-    height: "'16:9'"
+    height: "'auto'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -32,17 +32,17 @@
   bullets: true
   captions: true
   images:
-    - src: /img/9.jpg
-      alt: Sense and Avoid for small drones. © MAVLab
+    - src: img/9.jpg
+      alt: Sense and Avoid for small drones ©MAVLab
       href: https://www.percevite.org
-    - src: /img/8.png
-      alt: Outdoor flights on Paparazzi Autopilot. © MAVLab
+    - src: img/8.jpg
+      alt: Outdoor flights on Paparazzi Autopilot ©MAVLab
       href: https://github.com/tudelft/paparazzi/tree/percevite_wifi
-    - src: /img/10.png
-      alt: HiL simulations of conflict resolutions. © MAVLab
+    - src: img/10.jpg
+      alt: HiL simulations of conflict resolutions ©MAVLab
       href: https://github.com/nilay994/velobs/blob/master/nps-paparazzi/README.md
   settings:
-    height: "'16:9'"
+    height: "'auto'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -58,16 +58,16 @@
   bullets: true
   captions: true
   images:
-    - src: /img/15.jpg
-      alt: Drivetrain with Talon SRX © FRC6024
+    - src: img/15.jpg
+      alt: Drivetrain with Talon SRX ©FRC6024
       href: https://www.onshape.com/robots-to-the-rescue
-    - src: /img/16.jpg
-      alt: Robots at Sydney Olympic Park © FRC6024
+    - src: img/16.jpg
+      alt: Robots at Sydney Olympic Park ©FRC6024
       href: https://github.com/tudelft/paparazzi/tree/percevite_wifi
-    - src: /img/17.jpg
+    - src: img/17.jpg
       alt: Team picture!
   settings:
-    height: "'16:9'"
+    height: "'auto'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -83,14 +83,14 @@
   bullets: true
   captions: true
   images:
-    - src: /img/33.png
+    - src: img/33.jpg
       alt: ESP32 during HMI development
-    - src: /img/34.jpg
-      alt: ESP32 connected to AWS!!
-    - src: /img/35.jpg
-      alt: ESP32 DevKit © Espressif Systems
+    - src: img/34.jpg
+      alt: ESP32 connected to AWS
+    - src: img/35.jpg
+      alt: ESP32 DevKit ©Espressif Systems
   settings:
-    height: "'16:9'"
+    height: "'auto'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -105,14 +105,14 @@
   bullets: true
   captions: true
   images:
-    - src: /img/45.png
-      alt: Our robots getting ready for a match © SRA, VJTI
-    - src: /img/41.jpg
-      alt: Parade before the competition
-    - src: /img/42.png
-      alt: Panasonic Award for innovation!
+    - src: img/45.jpg
+      alt: Our robots getting ready for a match ©SRA, VJTI
+    - src: img/41.jpg
+      alt: Parade before the international league
+    - src: img/42.jpg
+      alt: Panasonic Award for innovation
   settings:
-    height: "'16:9'"
+    height: "'auto'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -127,30 +127,30 @@
   bullets: true
   captions: true
   images:
-    - src: /img/51.jpg
+    - src: img/51.jpg
       alt: Lego Porsche ready for assembly
-    - src: /img/52.jpg
+    - src: img/52.jpg
       alt: Drivetrain
-    - src: /img/53.jpg
+    - src: img/53.jpg
       alt: Chassis
-    - src: /img/54.jpg
+    - src: img/54.jpg
       alt: Powered by esp32? why not
-    - src: /img/55.jpg
+    - src: img/55.jpg
       alt: arduino-clone kicad gerber view
       href: https://github.com/nilay994/arduino-clone-kicad
-    - src: /img/56.jpg
+    - src: img/56.jpg
       alt: MIT Media Labs, Imaging experiences track
-    - src: /img/57.jpg
+    - src: img/57.jpg
       alt: MIT Media Labs, ideation of pano-band
       href: https://www.youtube.com/watch?v=V2vUxHSrBw0
-    - src: /img/58.jpg
+    - src: img/58.jpg
       alt: Wrist watch multimeter at Texas Instruments Challenge
-    - src: /img/59.jpg
-      alt: and old self-parking car prototype
-    - src: /img/60.png
-      alt: grid solving robot
+    - src: img/59.jpg
+      alt: Old self-parking car prototype
+    - src: img/60.jpg
+      alt: Grid solving robot
   settings:
-    height: "'16:9'"
+    height: "'auto'"
     initialHeight:
     maxHeight:
     interval: 12000
@@ -167,14 +167,14 @@
   bullets: true
   captions: true
   images:
-    - src: /img/101.png
-    - src: /img/102.jpg
-    - src: /img/103.jpg
-    - src: /img/104.jpg
-    - src: /img/107.jpeg
-    - src: /img/108.jpeg
+    - src: img/101.jpg
+    - src: img/102.jpg
+    - src: img/103.jpg
+    - src: img/104.jpg
+    - src: img/107.jpeg
+    - src: img/108.jpeg
   settings:
-    height: "'16:9'"
+    height: "'auto'"
     initialHeight:
     maxHeight:
     interval: 2000
@@ -186,6 +186,6 @@
     nextNavSelector:
 
 
-    # - data-src: /img/3.jpg
-    #   data-src-2x: /img/3@2x.jpg
+    # - data-src: img/3.jpg
+    #   data-src-2x: img/3@2x.jpg
     #   alt: Use data-src-2x for HiDPI devices
