@@ -4,34 +4,8 @@
   {% include head.html %}
   
   <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-
-        <ul class="navbar">
-          <li><a href="./index">home</a></li>
-          <li><a href="./projects">projects</a></li>
-          <li><a href="./publications">publications</a></li>
-          <li>blog</li>
-          <ul>
-            <li><a href="./ssh">ssh</a></li>
-          </ul>
-        </ul>
-
-        <ul class="downloads">
-          <li><a href="./img/nilay-resume.pdf" target="_blank">view <strong>Resume</strong></a></li>
-          <li><a href="mailto:nilay_994@hotmail.com" target="_blank">Send an <strong>email!</strong></a></li>
-        </ul>
-        
-      </header>
-      <section>
-
-      {{ content }}
-      
-      </section>
-      <footer>
-       <!-- © Nilay Sheth-->
-      </footer>
+    <div class="blog_wrapper">
+    {{ content }}
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}

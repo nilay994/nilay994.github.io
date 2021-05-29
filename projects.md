@@ -10,14 +10,10 @@ image_sliders:
 ---
 
 # Projects
+<div style="text-align:center"><img src="./img/world_map.jpg" width="500px"><br><em>Presence footprint</em></div>
 
-![projects at](img/world_map.jpg)
-*Image: presence footprint*
+***A few pictures in the slides below are hyperlinked, so click away on the moving pictures if you like the project! :P***
 
-***Some pictures in the slides below are hyperlinked, so click away on the moving pictures if you like the project! :P***
-
-* * *
- <br /> <br /> <br />
 
 ## MAVLab, TU Delft's Aerospace faculty (2019-current)
 Position: Researcher responsible for *Control, Embedded Systems, Path planning and State estimation*. 
@@ -40,8 +36,7 @@ Implemented [detumbling algorithms](https://github.com/nilay994/detumble) using 
 - B dot detumbling algorithm
 - MATLAB simulations with HiL support
 
-![PocketCube Workshop Delft](img/12.jpg)
-*PocketCube Workshop Delft*
+  <div style="text-align:center"><img src="./img/12.jpg" width="600px"><br><em>PocketCube Workshop Delft</em></div>
 
 * * *
  <br /> <br /> <br /> 
