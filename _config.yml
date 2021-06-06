@@ -3,6 +3,7 @@ logo: ./img/profile-picture.jpg
 description: embedded / control systems engineer
 show_downloads: true
 google_analytics: UA-177345932-1
+google_site_verification: WDM9ru1Fg0PQa5mESVhgzpsPFiqoQtvSJ4czyK9V0jg
 theme: jekyll-theme-minimal
 # markdown: kramdown
 exclude:
@@ -11,4 +12,9 @@ exclude:
 plugins: 
   - jemoji
   - jekyll-feed
+  - jekyll-seo-tag
 #  - jekyll-youtube
+social:
+  name: Nilay Sheth
+  links:
+    - https://www.linkedin.com/in/legorative/

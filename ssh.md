@@ -1,12 +1,13 @@
 ---
 layout: pages
+title: "Learnings around ssh and copying files around"
 ---
 
 # ssh around 
 
-For sending files over, most of us rely on cloud services like Google Drive or WeTransfer, and I find this a bit tiresome. I've found to dislike it for the inability of beaming files over directly to the destination without storing it. As a positive side-effect, such a feature would significantly reduce the storage requirement inside server farms by not having to store our useless data. After paying enough broadband fees for the internet infrastructure, it struck me that the internet protocol is free - and it can be used to route packets directly to a destination, like how the forgotten `ftp` has always done it. I explored this a bit in detail with the more secure/encrypted protocols (`ssh/scp`) and wrote down the learnings from it. Also, with the single-board linux computer revolution in robotics, many of us dump our post-run logs for analysis using these methods, so the steps could be useful there as well.
+Most of us rely on services like Google Drive for sending files over and I found this a bit tiresome. Sending files directly to a destination without servers ever storing our useless one-time data sounded much better to me. After paying our monthly broadband fees for the internet infrastructure, it struck me that the internet protocol was free and could be used to route packets directly to a destination, like how the forgotten `ftp` had always done it (this page uses `ssh`). Also, with the single-board-computer revolution in robotics, many of us dump our logs for analysis using `ssh`, so the steps in this page could find applications in robotics as well.
 
-*Disclaimer: There is a high possibility that this page will frustrate someone; especially an expert in networking. The methods used here are quite preliminary and expose ports of a computer to the internet, increasing vulnerability to attacks. Security is the last thing this page is addressing (literally). There are a few steps mentioned at the end of this page to increase security while still preserving connectivity.*
+*Disclaimer: The methods used here are quite preliminary and expose ports of a computer to the internet, increasing vulnerability to attacks. Security is the last thing this page is addressing (literally), there are a few steps mentioned at the end of this page to increase security while still preserving connectivity.*
 
 Table of Contents
   - [Chapter 1: Scenario](#chapter-1-scenario)
@@ -19,18 +20,16 @@ Table of Contents
   - [References 📖](#references-)
 
 ## Chapter 1: Scenario
-The paragraph below only exists to motivate the usage of different methods by a scenario. If one manages to symbolically replace the scenario below with their problem statement, then the `ssh` commands listed here could be easier to translate. 
+The paragraph below motivates different `ssh` methods with help of a scenario. If you manage to symbolically replace the scenarios below with your problem statement, then the commands listed in this page could be easier to translate for your use-case. In the image below notice the following:
 
-In the image below notice the following:
-
-There are three computers and three associated users,  e.g. computer `A` has user called `userA`. Computer `A` will be refered to as `A` and the name `userA` would usually be used in commands, and must be replaced by whoever is `userA` for you. They are all connected in different ways:
-   1. `A` in the red area is a computer at lets say, a lab. It is connected to the *blue* ocean of the internet, but only through a router, which goes to the firewall of a company - seems pretty restrictive. As a user, we'd never know if our company has such a hardware firewall, until we speak to IT. Maybe there never is a firewall or it just exists as a placebo to keep people in check.
-   2. `B` in the blue area is a friend who is likely commuting, maybe connected to the internet via  a cellphone tower (2G/3G/4G). Commands for `B` were tested on an android smartphone, since 72% of us use an android operating system.
-   3. `C` in the grey area is you, with a router connected to an internet service provider (ISP). A router or a modem is usually where the change of physical medium takes place. For e.g. a place where a wifi/ethernet cable gets converted to a fibre optical cable or a satellite dish connection. In case there is more than one hop (i.e. intermediate router/switch) between `C` and the ISP, **one must still have the access to the *main* router for this to work**.
+There are three computers and three associated users, (computer `A` has a user called `usera` and so on..). The three are connected to the internet in different ways:
+   1. `A` in the red area is a computer at a lab. It is connected to the *blue* ocean of the internet, but only through a router, which likely goes through a firewall. Maybe a hardware firewall is absent but is used as only as a placebo to keep people in check.
+   2. `B` in the blue area is a friend who is likely commuting, maybe connected to the internet via a cellphone tower (2G/3G/4G). Commands for `B` were tested on a smartphone running android OS.
+   3. `C` in the grey area is you, with a router connected to an internet service provider (ISP). A router or a modem is a place where change in the physical medium takes place. For e.g. where a wifi/ethernet cable gets converted to a fibre optical cable or a satellite dish connection. In case there is more than one hop (i.e. intermediate router/switch) between `C` and the ISP, **one must still have the access to the *main* router** for commands in [Chapter 2](#chapter-2-low-hanging-fruit-first) to work.
 
 <div style="text-align:center"><img src="./img/ssh/ssh1.png" width="600px"><br><em>Figure1: Different computers in different networks wanting to exchange a file</em></div>
 
-For checking if there is an intermediate hardware-firewall/switch/repeater/hub/router between a computer and the *main* router that is connected at the interface (i.e. change of physical medium as mentioned above). Maybe one could run a `traceroute` command, to see if a packet takes more than one hop to surface to an external ip address? 
+There could be an intermediate hardware-firewall/switch/repeater/hub/router between a computer and the *main* router if a packet takes more than one hop to surface to an external ip address (see [traceroute](#appendix-b-connection-metrics-)).
 
 ## Chapter 2: Low hanging fruit first
 In the image below, notice which connections could be established easily and which ones not:
@@ -40,10 +39,10 @@ In the image below, notice which connections could be established easily and whi
 
 <div style="text-align:center"><img src="./img/ssh/ssh2.png" width="600px"><br><em>Figure2: What can be connected straightaway ✅ and what cannot ❌</em></div>
 
-[^1] Maybe even a router isn't needed to connect `A` and `C` in the red area. Two computers can directly be connected using a single ethernet cable, but in the absence of an IP resolver like a router,  the IP addresses for both `A` and `C` must be static and in the same subnet mask. Also, the ethernet cable that might be required could be a crossover-cable.
+[^1: sidenote] Maybe even a router isn't needed to connect `A` and `C` in the red area. Two computers can directly be connected using a single ethernet cable, but in the absence of an IP resolver like a router,  the IP addresses for both `A` and `C` must be static and in the same subnet mask. Also, the ethernet cable that might be required could be a crossover-cable like CAT-5e/CAT-6.
 
 ## Chapter 3: Open your heart to the internet (connect `B` and `C`)
-I've experienced that asking people to hand out their credentials or to asking them to follow multiple steps could discourage them to try out our nice method. So the efforts could stay focussed on `C`'s side than `B`. Only one of them needs to follow the steps below. So, what does `C` have to do to make `B` connect to it? In such an arrangement, `C` becomes the server side and `B` becomes the client side.
+Asking people to hand out their credentials could discourage them to try out our nice method. So the efforts could stay focussed on `C`'s side than `B`. Only one of them needs to follow the steps below. So, what does `C` have to do to make `B` connect to it? In such an arrangement, `C` becomes the server side and `B` becomes the client side.
 1. Allow incoming connections to `C` by opening a port on the *main* router. PC Magazine defines Port forwarding in the following manner:
    > *"Port forwarding is commonly used to make services on a host residing on a protected or internal network available to hosts on the opposite side of the gateway (external network), by remapping the destination IP address and port number of the communication to an internal host." bala-bala boom technical skip~~*
 
@@ -52,7 +51,7 @@ I've experienced that asking people to hand out their credentials or to asking t
    <div style="text-align:center"><img src="./img/ssh/port-forward.png" width="350px"><br>
    <em>Figure3.1: Router settings</em></div>
       
-   The snip above advices that one can refrain from using the default `sftp`, `scp`, `ssh` port numbers like port 21 or port 22 as an external port. For security, it is standard practice to use a higher arbitrary port number. If there are multiple locals computer that require to be accessed, then one could choose a different external port for that particular local IP, which again maps to the new computer's local port 22.
+   The snip above advices that one can refrain from using the default `sftp`, `scp`, `ssh` port numbers like port 21 or port 22 as an external port. For the sake of security, it is standard practice to use a higher arbitrary port number. If there are multiple local computers are to be accessed, then one could choose a different external port for that particular local IP, which again maps to the new computer's local port 22.
 
 2. After a successful creation of a port forwarding rule, an `ssh` server can start running on `C`. If its the first time that such a connection is being established, it is recommended to [setup a public and private key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). An `ssh` server can be started on `C` with the following command:
    ```
@@ -65,7 +64,7 @@ I've experienced that asking people to hand out their credentials or to asking t
 3. Now, the friend `B` who has `C`'s ip-address 🏠 (`31.162.222.10`) can arrive at the port ⚓ 9876 (set in step2). After arriving here, `B` can ask if `C` could help access `userC`'s files. If observed carefully, the bytes on Port 9876  are being mapped to Port 22 by the router in the grey area. Also, seems like `C` went ahead and got a domain name `myserver.mooo.com`, so `B` doesn't have to remember the address `31.162.222.10`, how thoughful is that ❤️.
    <div style="text-align:center"><img src="./img/ssh/chapter3.png" width="600px"><br><em>Figure3.2: Global address to reach C: 31.162.222.10:9876</em></div>
 
-1. After making `C` a global citizen, there are only two commands `B` has to enter in the termux application now:
+4. After making `C` a global citizen, there are only two commands `B` has to enter in the termux application now:
    ```
    pkg install openssh
    ssh -p 9876 userC@myserver.mooo.com
