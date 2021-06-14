@@ -2,8 +2,6 @@
 layout: default
 ---
 
- <br /> <br /> <br />
-
 A **researcher** employed by TU Delft, the Netherlands for making drones fly faster than ever.
 
 An **engineer** bringing various sensors, actuators and processors together which (sometimes) leads to bringing the whiteboard idea to life :innocent:
