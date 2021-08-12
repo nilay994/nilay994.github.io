@@ -61,7 +61,7 @@ Asking people to hand out their credentials could discourage them to try out our
    ssh userC@localhost
    ```
    With the last command, `userC` on `C` would `ssh` into itself, giving back the terminal after succesful login.
-3. The friend `B` who has `C`'s ip-address 🏠 (`31.162.222.10`) can now arrive at the port ⚓ 9876 (set in step2). After arriving here, `B` can ask if `C` could help access `userC`'s files. If observed carefully, the bytes on Port 9876  are being mapped to Port 22 by the router in the grey area. Also, it seems like `C` went ahead and got a domain name `myserver.mooo.com`, so `B` doesn't have to remember the address `31.162.222.10`, how thoughful is that ❤️.
+3. The friend `B` who has `C`'s ip-address 🏠 (`31.162.222.10`) can now arrive at the port ⚓ 9876 (set in step2). After arriving here, `B` can ask if `C` could help access `userC`'s files. If observed carefully, the bytes on Port 9876  are being mapped to Port 22 by the router in the grey area. Also, it seems like `C` went ahead and got a domain name `myserver.mooo.com`, so `B` doesn't have to remember the address `31.162.222.10`, how thoughtful is that ❤️.
    <div style="text-align:center"><img src="./img/ssh/chapter3.png" width="600px"><br><em>Figure 3.2: Global address to reach C: 31.162.222.10:9876</em></div>
 
 4. After making `C` a global citizen, there are only two commands `B` has to enter in the termux application now:
