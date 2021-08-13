@@ -161,31 +161,6 @@
     previousNavSelector:
     nextNavSelector:
 
-
-
-- selector: slider7
-  bullets: true
-  captions: true
-  images:
-    - src: img/101.jpg
-    - src: img/102.jpg
-    - src: img/103.jpg
-    - src: img/104.jpg
-    - src: img/107.jpeg
-    - src: img/108.jpeg
-  settings:
-    height: "'auto'"
-    initialHeight:
-    maxHeight:
-    interval: 2000
-    transitionDuration:
-    effect: "'slide'"
-    disableNav: false
-    keyboardNav: true
-    previousNavSelector:
-    nextNavSelector:
-
-
     # - data-src: img/3.jpg
     #   data-src-2x: img/3@2x.jpg
     #   alt: Use data-src-2x for HiDPI devices
