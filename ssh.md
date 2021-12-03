@@ -1,6 +1,6 @@
 ---
 layout: pages
-title: "Learnings around ssh and copying files around"
+title: "ssh learnings"
 ---
 
 # ssh around 
@@ -60,7 +60,7 @@ Asking people to hand out their credentials could discourage them to try out our
    sudo service sshd restart
    ssh userC@localhost
    ```
-   With the last command, `userC` on `C` would `ssh` into itself, giving back the terminal after succesful login.
+   With the last command, `userC` on `C` would `ssh` into itself, giving back the terminal after successful login.
 3. The friend `B` who has `C`'s ip-address 🏠 (`31.162.222.10`) can now arrive at the port ⚓ 9876 (set in step2). After arriving here, `B` can ask if `C` could help access `userC`'s files. If observed carefully, the bytes on Port 9876  are being mapped to Port 22 by the router in the grey area. Also, it seems like `C` went ahead and got a domain name `myserver.mooo.com`, so `B` doesn't have to remember the address `31.162.222.10`, how thoughtful is that ❤️.
    <div style="text-align:center"><img src="./img/ssh/chapter3.png" width="600px"><br><em>Figure 3.2: Global address to reach C: 31.162.222.10:9876</em></div>
 
@@ -145,7 +145,7 @@ Could make someone's journey to access computer `C` by introducing an extra jump
 <div style="text-align:center"><img src="./img/ssh/rpi-zero.png" width="250px"><br><em>Could salvage an extra jump server from the Rpi-Zero of our drone</em></div>
 
 ### 3. Make the destination not worth it
-There could be a seperate user account on `C` named `newuserC`, which just shares the folders with the original `userC`. Sharing could be limited to reading the files and no writing permissions could be granted to `newuserC`. `ssh` connections are now initiated by this `newuserC`.
+There could be a separate user account on `C` named `newuserC`, which just shares the folders with the original `userC`. Sharing could be limited to reading the files and no writing permissions could be granted to `newuserC`. `ssh` connections are now initiated by this `newuserC`.
 
    | user     | access |
    |----------|--------|
@@ -198,7 +198,7 @@ Excited to see how this command would behave on a starlink network 🛰️. Do t
 
 ## Appendix C: Misc
 1. Append `~/.ssh/id_rsa.pub` of your computer to `~/.ssh/authorized_keys` of a server to prevent typing passwords all the time.
-2. Run an expect script (`.exp`) to automate a repitative task like `ssh`ing into, execute file transfers via `spawn scp`, to dump files back from your server to your local.
+2. Run an expect script (`.exp`) to automate a repetitive task like `ssh`ing into, execute file transfers via `spawn scp`, to dump files back from your server to your local.
 3. Use `rsync` instead of `scp` to only download the changed files in a destination.
 4. Install `JuiceSSH` on android to replace `termux`, but requires paid versions for configuring jump servers.
 5. `winscp` for windows can also handle jump servers, and above methods can work after switching the protocol to `scp` instead of `ftp`.
