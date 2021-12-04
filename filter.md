@@ -30,34 +30,39 @@ The measurements from sensors were acquired every 2ms and sent out to the first-
 
 ## But processors live in a discrete world 📈
 In the Laplacian ℒ /continuous domain, the filter is given as:
+
 $$H(s)= \frac{1}{(s/w_c + 1)} = \frac{1}{s/(20 \pi) + 1}$$
 
 On discretization, $H(s)$ can be represented as $H(z)$ instead, which could later be implemented in the C-code of the robot. On substituting the design pparameters and using zero-order hold for discretization, $H(z)$ was given by:
+
 $$H(z) = \Z(H(s)) = \frac{Y(z)}{X(z)} = \frac{0.12}{z - 0.88}$$
 
 In the z-domain, the filter can later be converted to a difference equation so to be able to realize it using just the "+" and "*" operators. Not completely sure if consistent with theory, but this could be how:
 
 $$\frac{y[n]}{x[n]} = \frac{0.12 z^{-1}}{1 - 0.88z^{-1}}$$
+
 $$y[n] - 0.88z^{-1}y[n] = 0.12z^{-1}x[n]$$
+
 $$y[n] = 0.12x[n-1]+0.88y[n-1]$$
 
 If we rollout one sample too early and replace the 0.12 term by $\alpha$, the filter could now be given as:
+
 $$y[n+1] = \alpha x[n] + (1 - \alpha) y[n]$$ 
 
 ## Filter characteristics
 With this implementation, $y[n]$ is guaranteed to remain bounded if $x[n]$ remains bounded and $\alpha \in (0,1)$, which translates to the requirement of the z-domain pole to lying inside the unit circle. Although not favorable, unexpected delays (latency/jitter) while sampling input $x[n]$ also keeps the filter bounded if the prior conditions are met.
 
 <p style="text-align:center">
-<img src="./img/filter/filter_2/filter_2.png" width="250px">
-<img src="./img/filter/filter_3/filter_3.png" width="250px">
-<img src="./img/filter/filter_4/filter_4.png" width="250px">
-<br><em>Figure 3: Step response, Bode plot and Group delay</em></div>
+<img src="./img/filter/filter_2/filter_2.png" width="300px">
+<img src="./img/filter/filter_3/filter_3.png" width="300px">
+<img src="./img/filter/filter_4/filter_4.png" width="300px">
+<br><em>Figure 3: Step response, Bode plot and Group delay</em>
 </p>
 
 - The rise time ($t_r$) of the filter is around 35ms and the settling time is around 63ms. Usually, $t_r \approx 2/w_c$.
-- A bode plot of the continuous time filter shows the half-power (-3dB) gain and -45$\degree$ phase lag as expected. Figure 1 already shows the gain to be halved after cut-off frequency. The phase delay for any periodic signal going through is also straightforward to calculate. A `bode` plot is nothing but values of `magnitude` and `phase` of the filter after substituting $s = j\omega$ in $H(s)$. i.e. For a signal of $1Hz$, 
-$$H(s) = H(j\omega) = \frac{1}{1+0.1j} \approx 1 \angle -5.71\degree$$
-- The phase plot in the `bode` figure above hints that there is a phase lag of $5.71\degree$ for a periodic signal of $1Hz$. For such a signal, a delay of 1 second would mean $360\degree$ of phase shift. Hence for $5.71\degree$ of phase shift, there is a delay of $\approx 0.0158s$ from the input signal. 
+- A bode plot of the continuous time filter shows the half-power (-3dB) gain and -45° phase lag as expected. Figure 1 already shows the gain to be halved after cut-off frequency. The phase delay for any periodic signal going through is also straightforward to calculate. A `bode` plot is nothing but values of `magnitude` and `phase` of the filter after substituting $s = j\omega$ in $H(s)$. i.e. For a signal of $1Hz$, 
+$$H(s) = H(j\omega) = \frac{1}{1+0.1j} \approx 1 \angle -5.71^{\circ}$$
+- The phase plot in the `bode` figure above hints that there is a phase lag of 5.71° for a periodic signal of $1Hz$. For such a signal, a delay of 1 second would mean 360° of phase shift. Hence for 5.71° of phase shift, there is a delay of $\approx 0.0158s$ from the input signal. 
 - Group delay characteristics hint how much signals with different periodicities are delayed when they pass through this IIR filter. For a signal of $1Hz$, the plot below indicates around 8.4 samples of delay $\approx(8.4 * 2ms) \approx 0.0166s$, which is approximately the phase shift calculated above. If music signals were to pass through this filter, individual frequencies in the wide-band signal would be differently delayed, possibly distorting the music in an unfavorable manner. This highlights the primary shortcoming of IIR filters, i.e. its non-linear phase response. This shortcoming could then be resolved by using an FIR filter - which usually has a linear phase response and almost a constant time delay regardless of the frequency of input signals.
 
 ## C-implementation 💻
