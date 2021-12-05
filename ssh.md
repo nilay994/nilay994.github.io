@@ -1,6 +1,6 @@
 ---
 layout: pages
-title: "ssh learnings"
+title: "ssh"
 ---
 
 # ssh around 

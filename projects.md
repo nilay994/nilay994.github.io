@@ -42,7 +42,7 @@ Implemented [detumbling algorithms](https://github.com/nilay994/detumble) using 
  <br /> <br /> <br /> 
 
 ## Espressif, Shanghai (2016 - 2017)
-Position: Firmware / Applications engineer
+Position: Firmware/Applications engineer
 
 Contributing to the firmware development of the famous [esp-idf](https://github.com/espressif/esp-idf) for the ESP32 chip!
 - FreeRTOS

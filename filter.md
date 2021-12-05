@@ -1,11 +1,11 @@
 ---
 layout: pages
-title: "filtering learnings"
+title: "filter"
 ---
 
 # Filtering
 During my first year of undergrad, I came across a widely used filter on our robots called the complementary filter (correctly known as first order low pass filters). This filter was used to remove measurement noise from sensors before sending commands to actuators taking control actions.
-It was just a one-liner in c:
+Its implementation was just a one-liner in `C`:
 ```c 
 out = alpha * in + (1 - alpha) * out;
 ```
@@ -35,15 +35,17 @@ $$H(s)= \frac{1}{(s/w_c + 1)} = \frac{1}{s/(20 \pi) + 1}$$
 
 On discretization, $H(s)$ can be represented as $H(z)$ instead, which could later be implemented in the C-code of the robot. On substituting the design pparameters and using zero-order hold for discretization, $H(z)$ was given by:
 
-$$H(z) = \Z(H(s)) = \frac{Y(z)}{X(z)} = \frac{0.12}{z - 0.88}$$
+$$H(z) = Z(H(s)) = \frac{Y(z)}{X(z)} = \frac{0.12}{z - 0.88}$$
 
 In the z-domain, the filter can later be converted to a difference equation so to be able to realize it using just the "+" and "*" operators. Not completely sure if consistent with theory, but this could be how:
 
-$$\frac{y[n]}{x[n]} = \frac{0.12 z^{-1}}{1 - 0.88z^{-1}}$$
-
-$$y[n] - 0.88z^{-1}y[n] = 0.12z^{-1}x[n]$$
-
-$$y[n] = 0.12x[n-1]+0.88y[n-1]$$
+$$
+\begin{align}
+\frac{y[n]}{x[n]} &= \frac{0.12 z^{-1}}{1 - 0.88z^{-1}} \\
+y[n] - 0.88z^{-1}y[n] &= 0.12z^{-1}x[n] \\
+y[n] &= 0.12x[n-1]+0.88y[n-1]
+\end{align}
+$$
 
 If we rollout one sample too early and replace the 0.12 term by $\alpha$, the filter could now be given as:
 
@@ -129,8 +131,11 @@ void loop()
     }
 }
 ```
-<img src="./img/filter/rc_lpf_wiki.png" align="right" width="200px"/><p>A small let-down at the end of the page, I've been wanting to say that such filters can easily be realized without compute by using a very simple RC network as shown here. The cutoff frequency is decided by the components i.e. $R, C$ and is given as $f_c = 1/(2\pi R C)$, while the rise time $t_r \approx 2 RC$.</p>
+<img src="./img/filter/rc_lpf_wiki.png" align="right" width="200px"/>A small let-down at the end of the page, I've been wanting to say that such filters can easily be realized without compute by using a very simple RC network as shown here. The cutoff frequency is decided by the components i.e. $R, C$ and is given as $f_c = 1/(2\pi R C)$, while the rise time $t_r \approx 2 RC$.
 
-## References
+## Resources
+- [Curio Res](https://www.youtube.com/watch?v=HJ-C4Incgpw)
 - [Jason Sachs](https://www.embeddedrelated.com/showarticle/779.php)
 - [Phil's lab](https://philsal.co.uk/)
+
+Thanks to [Neel Nagda](https://github.com/neel-stark) for helping with fundamentals of the approach 🥳

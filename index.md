@@ -10,6 +10,6 @@ Far from "Give me a lever long enough, and I will move the world" but closer to 
 
 Nice to meet you. Nicer in person - D<sup>3</sup>
 
-[projects](./projects)
+<a href="./publications">Publications</a>
 
-[publications](./publications)
+<a href="./projects">Projects</a>
