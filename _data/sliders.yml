@@ -2,19 +2,19 @@
   bullets: true
   captions: true
   images:
-    - src: img/1.jpg
+    - src: img/1.webp
       alt: We are the champions! © Drone Racing League
       href: https://www.tudelft.nl/en/2019/tu-delft/mavlab-world-champion-in-airr-autonomous-drone-race-2019/
-    - src: img/2.jpg
+    - src: img/2.webp
       alt: at work!
       href: https://markets.businessinsider.com/news/stocks/lockheed-martin-drone-racing-league-announce-a-i-robotic-racing-circuit-champions-give-team-1-million-cash-prize-for-fastest-autonomous-racing-drone-1028747953#
-    - src: img/3.jpg
+    - src: img/3.webp
       alt: AIRR trophy
       href: https://www.wired.com/story/coders-versus-human-pilots-drone-race/
-    - src: img/5.jpg
+    - src: img/5.webp
       alt: Race track at Washington DC ©DRL
       href: https://www.lockheedmartin.com/en-us/news/events/ai-innovation-challenge.html
-    - src: img/6.jpg
+    - src: img/6.webp
       alt: HIL setup © Drone Racing League
   settings:
     height: "'auto'"
@@ -32,13 +32,13 @@
   bullets: true
   captions: true
   images:
-    - src: img/9.jpg
+    - src: img/9.webp
       alt: Sense and Avoid for small drones ©MAVLab
       href: https://www.percevite.org
-    - src: img/8.jpg
+    - src: img/8.webp
       alt: Outdoor flights on Paparazzi Autopilot ©MAVLab
       href: https://github.com/tudelft/paparazzi/tree/percevite_wifi
-    - src: img/10.jpg
+    - src: img/10.webp
       alt: HiL simulations of conflict resolutions ©MAVLab
       href: https://github.com/nilay994/velobs/blob/master/nps-paparazzi/README.md
   settings:
@@ -58,13 +58,13 @@
   bullets: true
   captions: true
   images:
-    - src: img/15.jpg
+    - src: img/15.webp
       alt: Drivetrain with Talon SRX ©FRC6024
       href: https://www.onshape.com/robots-to-the-rescue
-    - src: img/16.jpg
+    - src: img/16.webp
       alt: Robots at Sydney Olympic Park ©FRC6024
       href: https://github.com/tudelft/paparazzi/tree/percevite_wifi
-    - src: img/17.jpg
+    - src: img/17.webp
       alt: Team picture!
   settings:
     height: "'auto'"
@@ -83,11 +83,11 @@
   bullets: true
   captions: true
   images:
-    - src: img/33.jpg
+    - src: img/33.webp
       alt: ESP32 during HMI development
-    - src: img/34.jpg
+    - src: img/34.webp
       alt: ESP32 connected to AWS
-    - src: img/35.jpg
+    - src: img/35.webp
       alt: ESP32 DevKit ©Espressif Systems
   settings:
     height: "'auto'"
@@ -105,11 +105,11 @@
   bullets: true
   captions: true
   images:
-    - src: img/45.jpg
+    - src: img/45.webp
       alt: Our robots getting ready for a match ©SRA, VJTI
-    - src: img/41.jpg
+    - src: img/41.webp
       alt: Parade before the international league
-    - src: img/42.jpg
+    - src: img/42.webp
       alt: Panasonic Award for innovation
   settings:
     height: "'auto'"
@@ -127,27 +127,27 @@
   bullets: true
   captions: true
   images:
-    - src: img/51.jpg
+    - src: img/51.webp
       alt: Lego Porsche ready for assembly
-    - src: img/52.jpg
+    - src: img/52.webp
       alt: Drivetrain
-    - src: img/53.jpg
+    - src: img/53.webp
       alt: Chassis
-    - src: img/54.jpg
+    - src: img/54.webp
       alt: Powered by esp32? why not
-    - src: img/55.jpg
+    - src: img/55.webp
       alt: arduino-clone kicad gerber view
       href: https://github.com/nilay994/arduino-clone-kicad
-    - src: img/56.jpg
+    - src: img/56.webp
       alt: MIT Media Labs, Imaging experiences track
-    - src: img/57.jpg
+    - src: img/57.webp
       alt: MIT Media Labs, ideation of pano-band
       href: https://www.youtube.com/watch?v=V2vUxHSrBw0
-    - src: img/58.jpg
+    - src: img/58.webp
       alt: Wrist watch multimeter at Texas Instruments Challenge
-    - src: img/59.jpg
+    - src: img/59.webp
       alt: Old self-parking car prototype
-    - src: img/60.jpg
+    - src: img/60.webp
       alt: Grid solving robot
   settings:
     height: "'auto'"
@@ -161,6 +161,6 @@
     previousNavSelector:
     nextNavSelector:
 
-    # - data-src: img/3.jpg
-    #   data-src-2x: img/3@2x.jpg
+    # - data-src: img/3.webp
+    #   data-src-2x: img/3@2x.webp
     #   alt: Use data-src-2x for HiDPI devices

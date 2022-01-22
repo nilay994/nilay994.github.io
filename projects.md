@@ -10,7 +10,7 @@ image_sliders:
 ---
 
 # Projects
-<div style="text-align:center"><img src="./img/world_map.jpg" width="500px"><br><em>Presence footprint</em></div>
+<div style="text-align:center"><img src="./img/world_map.webp" width="500px"><br><em>Presence footprint</em></div>
 
 ***A few pictures in the slides below are hyperlinked, so click away on the moving pictures if you like the project! :P***
 
@@ -36,7 +36,7 @@ Implemented [detumbling algorithms](https://github.com/nilay994/detumble) using 
 - B dot detumbling algorithm
 - MATLAB simulations with HiL support
 
-  <div style="text-align:center"><img src="./img/12.jpg" width="600px"><br><em>PocketCube Workshop Delft</em></div>
+  <div style="text-align:center"><img src="./img/12.webp" width="600px"><br><em>PocketCube Workshop Delft</em></div>
 
 * * *
  <br /> <br /> <br /> 

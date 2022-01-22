@@ -76,7 +76,7 @@ Implementing the first-order low-pass infinite impulse response filter in `C` wa
 
 typedef struct {
     float out;
-    float alpha
+    float alpha;
 } filter_lpf1_t;
 
 float lpf1(filter_lpf1_t *filt, float in);
