@@ -41,8 +41,8 @@ In the z-domain, the filter can later be converted to a difference equation so t
 
 $$
 \begin{align}
-\frac{y[n]}{x[n]} &= \frac{0.12 z^{-1}}{1 - 0.88z^{-1}} \\
-y[n] - 0.88z^{-1}y[n] &= 0.12z^{-1}x[n] \\
+\frac{y[n]}{x[n]} &= \frac{0.12 z^{-1}}{1 - 0.88z^{-1}} \\[3mm]
+y[n] - 0.88z^{-1}y[n] &= 0.12z^{-1}x[n] \\[3mm]
 y[n] &= 0.12x[n-1]+0.88y[n-1]
 \end{align}
 $$
@@ -138,4 +138,4 @@ void loop()
 - [Jason Sachs](https://www.embeddedrelated.com/showarticle/779.php)
 - [Phil's lab](https://philsal.co.uk/)
 
-Thanks to [Neel Nagda](https://github.com/neel-stark) for helping with fundamentals of the approach 🥳
+Thanks to [Neel Nagda](https://github.com/neel-stark) for helping with the fundamentals of this approach 🥳.
