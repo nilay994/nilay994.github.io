@@ -6,30 +6,51 @@ layout: pages
 _yay!_
 
 
-## Papers
-1. [The Artificial Intelligence behind the winning entry to the 2019 AI Robotic Racing Competition](https://arxiv.org/abs/2109.14985)
-   
-    In this article, we present the winning solution of the AI Robotic Racing (AIRR), which involved fully autonomous drone races. The core of our approach is inspired by how human pilots combine noisy observations of the race gates with mental models of the drone's dynamics to achieve fast control. Our approach has a large focus on gate detection with an efficient deep neural segmentation network and active vision. Further, we make contributions to robust state estimation and risk-based control. This allowed us to reach speeds of ~9.2m/s in the last race, unrivaled by previous autonomous drone race competitions. Although our solution was the fastest and most robust, it still lost against one of the best human pilots, Gab707. The presented approach indicates a promising direction to close the gap with human drone pilots, forming an important step in bringing AI to the real world. [Link](https://arxiv.org/abs/2109.14985) to paper. [Comment](https://www.nature.com/articles/s42256-021-00405-z.epdf) by Nature Machine Intelligence.
+### **- Artificial Intelligence behind the winning entry to the 2019 AI Robotic Racing Competition**
 
-2. [Control for autonomous drone racing](https://repository.tudelft.nl/islandora/object/uuid%3A99f41ef5-f2c9-4a0a-9b89-0245e106f6de)
+The article presents the winning solution of the AI Robotic Racing (AIRR)'s fully autonomous drone races. 
 
-    <div style="text-align:center"><img src="./img/publications/alphapilot.webp" width="400px"><br><em> Project at MAVLab-TUDelft </em></div>
+<iframe width="350" height="200" src="https://www.youtube.com/embed/2H1Eo8DTepg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen align="right"></iframe>
 
-    Flying/racing robots are agile autonomous platforms that operate at the limits of computational perception abilities and at the edge of aerodynamic flight envelopes. Such challenges make the field of autonomous drone racing prominent among research groups around the world. These races aim to push the boundaries of perception and control algorithms, while simultaneously mitigating the real-world uncertainty of execution on autonomous systems. While perception algorithms face challenges due to limited feature detection, high motion blur and computational requirements, control algorithms face challenges of planning trajectories that squeeze out every millisecond there is and still safely obeying those commands. This thesis addresses the challenge of control for racing, which is responsible for guiding drones to quickly design and track time-optimal trajectories for fast flights.
+<small>The core approach during this research was inspired by how human pilots combine noisy observations of the race gates with mental models of the drone's dynamics to achieve fast control. It achieved so by focussing on gate detection with an efficient deep neural segmentation network coupled with robust state estimation and risk-aware control. Reaching speeds of ~9.2m/s, the solution remained unrivaled by any of the previous autonomous drone race competitions. Despite this, it lost against one of the fastest human pilots, Gab707. The presented approach indicates a promising direction to close the gap with drone pilots, forming an important step in pushing smart vision and advanced control techniques to the real world.</small>
 
-3. [Li-Fi swarm robots with visual odometry](https://link.springer.com/chapter/10.1007/978-3-319-67934-1_18) - systems paper
-    <div style="text-align:center"><img src="./img/publications/swarm-lifi.webp" width="600px"><br><em>Project at SRA-VJTI</em></div>
+[Link](https://arxiv.org/abs/2109.14985) to the paper. [Comment](https://www.nature.com/articles/s42256-021-00405-z.epdf) by Nature Machine Intelligence.
 
-    Motivated by the looming radio frequency spectrum crisis, this project aims at demonstrating that Visible Light Communication (VLC) has now reached a state where it can prove that it is a viable solution to this fundamental problem. VLC is a technique used for data transmission at very high speeds through light, which transfers data by varying its intensity at unperceivable rates. The proposed solution also establishes a closed loop with an overhead camera which mocks like a GPS in the swarm environment. Positional information of the robots is given by augmented reality tags and this data is fed-back to the robots via VLC. The paper elaborately describes the approach used to exploit off-the-shelf components for facilitating VLC. Overhead localization and the closed loop made here control each swarm robot with simplex communication. Problems faced while prototyping and overcoming them in revisions have been also described. 
+### **- Control for autonomous drone racing**
 
-4. [Motor driver using charge pumps](https://ieeexplore.ieee.org/abstract/document/7443724/)
-    <div style="text-align:center"><img src="./img/publications/proteus.webp" width="500px"><br><em>Project at SRA-VJTI</em></div>
+Focuses on optimal control and trajectory planning for racing drones and was used in the development of the winning paper above. 
 
-    An efficient modeling of motor drivers using an H Bridge configuration driven by charge pumps controlled by embedded components is presented. N-channel MOSFETs and charge pumps together eliminate the problems of Dead time of MOSFETs and High values of RDS (ON). The embedded system using an ATMEL microcontroller drives the load and monitors the load voltages and input PWM to establish a closed loop system by comparing it with the stored threshold state space parameters of the motor, also in turn preventing MOSFET damage by synchronized control over the gates. Charge pump readings have been reported along with feedback readings for the microcontroller. Results obtained are in range with expected outputs.
+<img src="./img/publications/alphapilot.webp" width="400px" align="right"/>
 
-5. Other contributions towards research in academia:
-   - Control and embedded systems interface of the [CNN-based Ego-Motion Estimation for Fast MAV Maneuvers](https://arxiv.org/abs/2101.01841).
-   - Control and embedded systems interface of the [Neuromorphic control for optic-flow-based landings of MAVs using the Loihi processor](https://arxiv.org/abs/2011.00534).
+<small>Racing drones in use are agile autonomous platforms that operate at the limits of computational perception abilities while being at the edge of their aerodynamic flight envelopes. Such challenges make the field of autonomous drone racing prominent among research groups around the world. These races aim to push the boundaries of perception and control algorithms, while simultaneously mitigating the real-world uncertainty of execution on autonomous systems. While perception algorithms face challenges due to limited feature detection, high motion blur and computational requirements, control algorithms face challenges of planning trajectories that squeeze out every millisecond there is and still safely obeying those commands. This thesis addresses the challenge of control for racing, which is responsible for guiding drones to quickly design and track time-optimal trajectories for fast flights. </small> 
+
+[Link](https://repository.tudelft.nl/islandora/object/uuid%3A99f41ef5-f2c9-4a0a-9b89-0245e106f6de) to the thesis.
+
+### **- Li-Fi swarm robots with visual odometry**
+
+Li-Fi can transfer data by modulating the intensity of light at imperceivable rates. The proposed solution achieves closed loop control via Li-Fi/VLC with an overhead camera mocking a GPS in a swarm environment. 
+
+<div style="text-align:center"><img src="./img/publications/swarm-lifi.webp" width="700px"></div>
+
+<small>Motivated by the looming radio frequency spectrum crisis, this project aims to demonstrate that Visible Light Communication (VLC) provided enough bandwidth for closed loop control of multiple robots for indoor RF-free environment. The paper describes the approach used to exploit off-the-shelf components for facilitating a simplex VLC communication. Also discusses a few swarm algorithms which could be tested with the simple localization and control setup. </small>
+
+[Link](https://link.springer.com/chapter/10.1007/978-3-319-67934-1_18) to the paper.
+
+
+### **- Motor driver using charge pumps**
+
+After burning through a couple of motor drivers, quickly tried making one ourselves. An H-bridge configuration driven by charge pumps controlled by an embedded computer is presented here.
+
+<img src="./img/publications/proteus.webp" width="300px" align="right"/>
+<small> N-channel MOSFETs and charge pumps together eliminate the problems of Dead time of MOSFETs and High values of RDS (ON). The embedded system using an ATMEL μC drives the load and monitors the voltages and input PWM to establish a closed loop system by comparing it with the stored threshold state space parameters of the motor, in turn preventing MOSFET damage by synchronized control over the gates.</small> 
+
+&nbsp;
+[Link](https://ieeexplore.ieee.org/abstract/document/7443724/) to the paper.
+
+
+
+### **- Other projects**
+Control and embedded systems interface of the [CNN-based Ego-Motion Estimation for Fast MAV Maneuvers](https://arxiv.org/abs/2101.01841) and later also the [Neuromorphic control for optic-flow-based landings of MAVs using the Loihi processor](https://arxiv.org/abs/2011.00534).
 
 * * *
 ## Clubs
@@ -42,17 +63,18 @@ _yay!_
 
 ## News
 
-1. AlphaPilot challenge: 
+- **AlphaPilot challenge**: 
     [Business Insider](https://markets.businessinsider.com/news/stocks/lockheed-martin-drone-racing-league-announce-a-i-robotic-racing-circuit-champions-give-team-1-million-cash-prize-for-fastest-autonomous-racing-drone-1028747953#), [Lockheed Martin](https://www.lockheedmartin.com/en-us/news/events/ai-innovation-challenge.html), [WIRED magazine](https://www.wired.com/story/coders-versus-human-pilots-drone-race/) and [Bloomberg](https://www.bloomberg.com/news/videos/2018-09-05/lockheed-martin-looks-to-drone-racing-for-the-next-advance-in-ai-video).
 
-    <div style="text-align:left"><img src="./img/publications/65.webp" width="300px"><br><em>World champions!</em></div>
+    <img src="./img/publications/65.webp" width="300px">
 
-2. Asia Pacific Robocon
-    <div style="text-align:left"><img src="./img/publications/64.webp" width="400px"><br><em>We qualify for the international league!</em></div>
-    <div style="text-align:left"><img src="./img/publications/62.webp" width="400px"><br><em>and one more!</em></div>
-    <div style="text-align:left"><img src="./img/publications/61.webp" width="400px"><br><em>and one more from the SRA days!</em></div>
+    &nbsp;
+  
+- **Undergrad robotics chapter**:
 
-<!-- 3. add nhk radio JP + dd unlisted youtube. -->
+    <img src="./img/publications/64.webp" width="200px">
+    <img src="./img/publications/62.webp" width="200px">
+    <img src="./img/publications/61.webp" width="200px">
 
 [go to projects](./projects)
 

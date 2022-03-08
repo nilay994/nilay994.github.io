@@ -131,7 +131,12 @@ void loop()
     }
 }
 ```
-<img src="./img/filter/rc_lpf_wiki.png" align="right" width="200px"/>A small let-down, been wanting to say that such filters can easily be realized **without** compute by directly using a simple RC network shown here. The cutoff frequency is decided by the components i.e. $R, C$ and is given as $f_c = 1/(2\pi R C)$, while the rise time $t_r \approx 2 RC$.
+
+&nbsp;
+
+<img src="./img/filter/rc_lpf_wiki.png" align="right" width="230px"/>A small let-down, been wanting to say that such filters can easily be realized **without** compute by directly using a simple RC network shown here. The cutoff frequency is decided by the components i.e. $R, C$ and is given as $f_c = 1/(2\pi R C)$, while the rise time $t_r \approx 2 RC$.
+
+&nbsp;
 
 ## Resources
 - [Curio Res](https://www.youtube.com/watch?v=HJ-C4Incgpw)
