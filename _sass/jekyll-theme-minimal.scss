@@ -137,6 +137,36 @@ ul.downloads {
   height:30px;
 }
 
+.publ {
+  padding-top:20px;
+  padding-bottom:20px
+}
+
+.publ desc {
+  font-size:18px;
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.publ p {
+  margin: 10px 0px 10px 0px;
+  font-size:14px;
+}
+
+.publ iframe {
+  margin: 0px 0px 0px 20px;
+  float: right;
+  width: 500px;
+  height: 300px;
+}
+
+.publ img {
+  margin: 0px 0px 0px 20px;
+  float: right;
+  width: 500px;
+  height: auto;
+}
+
 .downloads li:first-child a {
   border-radius:5px 0 0 5px;
 }
