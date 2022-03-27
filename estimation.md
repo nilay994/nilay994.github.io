@@ -61,7 +61,7 @@ $$X = [-5938.6 \quad 2.96 \quad -3.84 \quad 2.32]$$
 
 - The yearly rise can then be given by $X_2 \approx +3$mm/yr. 
 - The phase can be given by $\tan ^{-1}(\frac{X_4}{X_3}) \approx -1$. 
-- Since sinusoid is flipped with an offset of 180° in figure 2, this marks the average start of the yearly sea-level rise to $-1 + 6$ i.e. May. This period marks the beginning of winter in the Antartic region and yet water fails to freeze 🤔?
+- Since sinusoid is flipped with an offset of 180° in figure 2, this marks the average start of the yearly sea-level rise to $-1 + 6$ i.e. May. This period marks the beginning of winter in the Antarctic region and yet water fails to freeze 🤔?
 
 The plot in red below shows the forward propagation of the model using the newly estimated parameters i.e. $\hat{y}$ = H$\hat{x}$.
 
@@ -77,7 +77,7 @@ There have been many ways to calculate an inverse of a matrix. Especially when a
 
 Probably an overkill, but Singular Value Decomposition has been my favorite way to perform an inversion, because of multiple reasons.
 - It gives the condition number right away from the first and the last entries in the $\Sigma$ matrix hinting the quality of the matrix inverse.
-- Analogous results from `scipy`/`matlab` and [LAPACK](https://github.com/Reference-LAPACK/lapack) in `C` if SVD is explicitly stated as the method for inversion.
+- Analogous results from `scipy`/`matlab` and [LAPACK](https://github.com/Reference-LAPACK/lapack) in `C`; if SVD is explicitly stated as the method for inversion.
 - SVD is used at multiple places, nice to be in touch with it. For e.g. during Principal Component Analysis using SVD, it is easy to discard a couple of rows/columns which correspond to tiny singular values.
 
 After SVD, for a given matrix $A = U \Sigma V^T$, its inverse can be given by $A^{-1} = V \Sigma^{-1} U^T$  
@@ -88,17 +88,25 @@ Python snippet for the parameter estimation problem above:
 from scipy import linalg
 import numpy as np
 
-def lsq(h, y):
+def lsq(h: np.ndarray, y: np.ndarray) -> np.ndarray:
+    """Calculate the estimated sea level using linear least squares.
+    Args:
+        h: 4 parameter model given in the equation above (np.ndarray of nx4 floats)
+        y: Measured sea levels (np.ndarray of nx1 floats)
+
+    Returns:
+        y_hat: Estimated sea levels after parameter estimation (np.ndarray of nx1 floats)
+    """
     # x = (H' * H)^{-1} * H' * y 
     hth = np.dot(np.transpose(h), h)    
     u, s, vh = linalg.svd(hth, full_matrices=False)
     hth_inv = np.dot(np.diag(1.0/s), np.transpose(u))
     hth_inv = np.dot(np.transpose(vh), hth_inv) # scipy gives out vh^T
-    x = np.dot(np.dot(hth_inv, np.transpose(H)), y)
+    x_hat = np.dot(np.dot(hth_inv, np.transpose(H)), y)
     # 360 deg = 12 months, offset of 6 months for phase inversion
-    phase = np.round(np.rad2deg(math.atan(x[3] / x[2])) * 12.0 / 360.0 + 6)
-    # estimated sea level (red plot)
-    y_hat = np.dot(h, x)
+    phase = np.round(np.rad2deg(math.atan(x_hat[3] / x_hat[2])) * 12.0 / 360.0 + 6)
+    # estimated sea level (red plot), y_hat = H * x_hat
+    y_hat = np.dot(h, x_hat)
     return y_hat
 ```
 

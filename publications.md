@@ -7,8 +7,7 @@ _yay!_
 
 <div class="publ">
 <h3>- Artificial Intelligence behind the winning entry to the 2019 AI Robotic Racing Competition</h3>
-<iframe src="https://www.youtube.com/embed/2H1Eo8DTepg" 
-             title="YouTube video player" 
+<iframe src="https://www.youtube.com/embed/2H1Eo8DTepg"
              frameborder="0" 
              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
              allowfullscreen>
