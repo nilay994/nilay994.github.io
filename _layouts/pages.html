@@ -26,66 +26,7 @@
         </ul>
         
       </header>
-
       <section>
-
-        <div class="c variable-width">
-          <div><img src="./img/51.webp"></div>
-          <div><img src="./img/52.webp"></div>
-          <div><img src="./img/53.webp"></div>
-          <div><img src="./img/54.webp"></div>
-          <div><img src="./img/55.webp"></div>
-          <div><img src="./img/56.webp"></div>
-          <div><img src="./img/57.webp"></div>
-          <div><img src="./img/58.webp"></div>
-          <div><img src="./img/59.webp"></div>
-        </div>
-
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
-        <script type="text/javascript">
-          $('.variable-width').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            centerPadding: '60px',
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            centerMode: true,
-          });                  
-        </script>
-
-        <div id="main-slider" class="splide">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide"><div>Slide 01</div><img src="./img/51.webp"></li>
-              <li class="splide__slide"><div>Slide 02</div><img src="./img/52.webp"></li>
-              <li class="splide__slide"><div>Slide 03</div><img src="./img/53.webp"></li>
-              <li class="splide__slide"><div>Slide 04</div><img src="./img/54.webp"></li>
-              <li class="splide__slide"><div>Slide 05</div><img src="./img/55.webp"></li>
-              <li class="splide__slide"><div>Slide 06</div><img src="./img/56.webp"></li>
-              <li class="splide__slide"><div>Slide 07</div><img src="./img/57.webp"></li>
-              <li class="splide__slide"><div>Slide 08</div><img src="./img/58.webp"></li>
-              <li class="splide__slide"><div>Slide 09</div><img src="./img/59.webp"></li>
-            </ul>
-          </div>
-        </div>
-
-        <script src="//cdn.jsdelivr.net/npm/@splidejs/splide?path=dist/splide.min.js"></script>
-        <script type="text/javascript">
-          var main = new Splide( '#main-slider', {
-            updateOnMove: true,
-            type        : 'loop',
-            perPage     : 3,
-            perMove     : 1,
-            focus       : 'center',
-            width     : '90%',
-            lazyLoad: true,
-            } );
-            main.mount()
-        </script>
 
       {{ content }}
       
