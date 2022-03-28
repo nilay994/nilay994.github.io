@@ -298,3 +298,25 @@ footer {
     color:#444;
   }
 }
+
+.splide__arrow--prev {
+  left:-5% !important;
+}
+
+.splide__arrow--next {
+  right:-5% !important;
+}
+
+.splide__slide {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+.splide__pagination {
+  top: 100% !important;
+  margin: 5px 5px 5px 5px  !important;
+}
+
+.splide.is-initialized {
+  margin: 30px !important;
+}
