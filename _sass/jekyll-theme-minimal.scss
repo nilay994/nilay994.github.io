@@ -139,32 +139,28 @@ ul.downloads {
 
 .publ {
   padding-top:20px;
-  padding-bottom:20px
-}
-
-.publ desc {
-  font-size:18px;
-  font-style: italic;
-  line-height: 1.1;
-}
-
-.publ p {
-  margin: 10px 0px 10px 0px;
-  font-size:14px;
-}
-
-.publ iframe {
-  margin: 0px 0px 0px 20px;
-  float: right;
-  width: 500px;
-  height: 300px;
-}
-
-.publ img {
-  margin: 0px 0px 0px 20px;
-  float: right;
-  width: 500px;
-  height: auto;
+  padding-bottom:20px;
+  desc {
+    font-size:18px;
+    font-style: italic;
+    line-height: 1.1;
+  }
+  p {
+    margin: 10px 0px 10px 0px;
+    font-size: 14px;
+  }
+  iframe {
+    margin: 0px 0px 0px 20px;
+    float: right;
+    width: 500px;
+    height: 300px;
+  }
+  img {
+    margin: 0px 0px 0px 20px;
+    float: right;
+    width: 500px;
+    height: auto;
+  }
 }
 
 .downloads li:first-child a {
@@ -299,22 +295,26 @@ footer {
   }
 }
 
-.splide__arrow--prev {
-  left:-5% !important;
-}
+.splide{
+  &__arrow--prev {
+    left:-5% !important;
+  }
+  &__arrow--next {
+    right:-5% !important;
+  }
 
-.splide__arrow--next {
-  right:-5% !important;
-}
+  &__slide {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
 
-.splide__slide {
-  margin-left: 10px !important;
-  margin-right: 10px !important;
-}
-
-.splide__pagination {
-  top: 100% !important;
-  margin: 5px 5px 5px 5px  !important;
+  &__pagination {
+    top: 100% !important;
+    margin: 5px 5px 5px 5px !important;
+  }
+  div {
+    font-size: 15px !important;
+  }
 }
 
 .splide.is-initialized {

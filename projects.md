@@ -87,7 +87,9 @@ Position: team captain, International Robocon 2014
 2. APAS
 3. Grid warrior
 
-{% include slider.html selector="slider6" %}
+{% include carousel.html %}
+
+
 
 * * *
  <br /> <br /> <br /> 
