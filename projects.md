@@ -10,7 +10,7 @@ image_sliders:
 ---
 
 # Projects
-<div style="text-align:center"><img src="./img/world_map.webp" width="500px"><br><em>Presence footprint</em></div>
+<div style="text-align:center"><img src="./img/projects/world_map.webp" width="500px"><br><em>Presence footprint</em></div>
 
 ***A few pictures in the slides below are hyperlinked, so click away on the moving pictures if you like the project! :P***
 

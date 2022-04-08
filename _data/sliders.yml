@@ -2,19 +2,19 @@
   bullets: true
   captions: true
   images:
-    - src: img/1.webp
+    - src: img/projects/01.webp
       alt: We are the champions! © Drone Racing League
-      href: https://www.tudelft.nl/en/2019/tu-delft/mavlab-world-champion-in-airr-autonomous-drone-race-2019/
-    - src: img/2.webp
+      href: 
+    - src: img/projects/02.webp
       alt: at work!
-      href: https://markets.businessinsider.com/news/stocks/lockheed-martin-drone-racing-league-announce-a-i-robotic-racing-circuit-champions-give-team-1-million-cash-prize-for-fastest-autonomous-racing-drone-1028747953#
-    - src: img/3.webp
+      href: 
+    - src: img/projects/03.webp
       alt: AIRR trophy
       href: https://www.wired.com/story/coders-versus-human-pilots-drone-race/
-    - src: img/5.webp
+    - src: img/projects/04.webp
       alt: Race track at Washington DC ©DRL
-      href: https://www.lockheedmartin.com/en-us/news/events/ai-innovation-challenge.html
-    - src: img/6.webp
+      href: 
+    - src: img/projects/05.webp
       alt: HIL setup © Drone Racing League
   settings:
     height: "'auto'"
