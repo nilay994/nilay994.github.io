@@ -58,7 +58,7 @@ Contributing to the firmware development of the famous [esp-idf](https://github.
 &nbsp;
 
 ## FIRST Robotics Stronghold, Sydney (2016)
-Position: Coach of the team [FRC6024](http://rfactor6024.com/), representing India internationally once more!
+Position: Coach of the team FRC6024, representing India internationally once more!
 - Designing the control systems for drivetrain of the robot
 - National Instruments RoboRio, using the nice WPILib firmware 
 
