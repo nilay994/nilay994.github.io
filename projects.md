@@ -36,7 +36,7 @@ Implemented [detumbling algorithms](https://github.com/nilay994/detumble) using 
 - B dot detumbling algorithm
 - MATLAB simulations with HiL support
 
-  <div style="text-align:center"><img src="./img/12.webp" width="600px"><br><em>PocketCube Workshop Delft</em></div>
+  <div style="text-align:center"><img src="./img/projects/12.webp" width="600px"><br><em>PocketCube Workshop Delft</em></div>
 
 &nbsp;
 
