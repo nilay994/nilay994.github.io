@@ -301,17 +301,15 @@ footer {
 
 .splide{
   &__arrow--prev {
-    left:-5% !important;
+    left:-8% !important;
   }
   &__arrow--next {
-    right:-5% !important;
+    right:-8% !important;
   }
-
   &__slide {
     margin-left: 10px !important;
     margin-right: 10px !important;
   }
-
   &__pagination {
     top: 100% !important;
     margin: 5px 5px 5px 5px !important;
