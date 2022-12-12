@@ -106,6 +106,7 @@ float lpf1(filter_lpf1_t *filt, float in)
 #define ACTUATION_RATE 50
 
 static filter_lpf1_t filt[2] = {0};
+static float sensor_1_filt, sensor_2_filt;
 
 void init()
 {
@@ -115,19 +116,16 @@ void init()
 
 void loop()
 {
-    float sensor_1_raw, sensor_1_filt;
-    float sensor_2_raw, sensor_2_filt;
     uint64_t ms_count = get_millis();
 
+    /* Sensing loop */
     if ((ms_count % SENSING_RATE) == 0u) {
-        sensor_1_raw = analog_read(A4);        
-        sensor_2_raw = analog_read(A5);
-        sensor_1_filt = lpf1(&filt[0], sensor_1_raw);
-        sensor_2_filt = lpf1(&filt[1], sensor_2_raw);
+        sensor_1_filt = lpf1(&filt[0], analog_read(A4));
+        sensor_2_filt = lpf1(&filt[1], analog_read(A5));
     }
 
+    /* Control loop */
     if ((ms_count % ACTUATION_RATE) == 0u) {
-        /* PID loops */
     }
 }
 ```

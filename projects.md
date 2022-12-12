@@ -72,9 +72,6 @@ Position: team captain, International Robocon 2014
 &nbsp;
 
 ## archived projects
-1. Show the 8th std diagram
-2. APAS
-3. Grid warrior
 
 {% include projects/slider_proj_6.html %}
 

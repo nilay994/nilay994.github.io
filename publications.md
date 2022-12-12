@@ -59,7 +59,7 @@ Control and embedded systems interface for
 
 * * *
 ## Clubs
-- [Society of Robotics and Automation](https://sra.vjti.info)
+- [Society of Robotics and Automation](https://sravjti.in/)
 - [MAVLab](https://mavlab.tudelft.nl)
 - Innovators Club of India
 - Also, posses a :golf: club
