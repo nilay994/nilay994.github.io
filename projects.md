@@ -1,5 +1,6 @@
 ---
 layout: pages
+title: "projects"
 ---
 
 # Projects

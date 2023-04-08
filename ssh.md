@@ -10,13 +10,20 @@ Sending files directly to a destination without having servers store our useless
 *Disclaimer: The methods used here are quite preliminary and expose ports of a computer to the internet, increasing vulnerability to attacks. Security is the last thing this page is addressing (literally), there are a few steps mentioned at the end of this page that increase security while still preserving connectivity.*
 
 Table of Contents
+- [ssh around](#ssh-around)
   - [Chapter 1: Scenario](#chapter-1-scenario)
   - [Chapter 2: Low hanging fruit first](#chapter-2-low-hanging-fruit-first)
   - [Chapter 3: Open your heart to the internet (connect `B` and `C`)](#chapter-3-open-your-heart-to-the-internet-connect-b-and-c)
   - [Chapter 4: Convince the IT dept (connect `A` and `C`)](#chapter-4-convince-the-it-dept-connect-a-and-c)
-  - [Chapter n+1: Increase security 🔒](#chapter-n1-increase-security-)
-  - [Chapter n+2: Connection metrics 📊](#chapter-n2-connection-metrics-)
-  - [Chapter n+3: Other tricks](#chapter-n3-other-tricks)
+  - [Appendix A: Increase security 🔒](#appendix-a-increase-security-)
+    - [1. Change configurations](#1-change-configurations)
+    - [2. Make the journey difficult](#2-make-the-journey-difficult)
+    - [3. Make the destination not worth it](#3-make-the-destination-not-worth-it)
+    - [4. Only you](#4-only-you)
+  - [Appendix B: Connection metrics 📊](#appendix-b-connection-metrics-)
+    - [1. Transfer speed](#1-transfer-speed)
+    - [2. Transfer route](#2-transfer-route)
+  - [Appendix C: Misc](#appendix-c-misc)
   - [References 📖](#references-)
 
 ## Chapter 1: Scenario
