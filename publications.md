@@ -9,8 +9,8 @@ _yay!_
 <div class="publ">
 <h3>- Artificial Intelligence behind the winning entry to the 2019 AI Robotic Racing Competition</h3>
 <iframe src="https://www.youtube.com/embed/2H1Eo8DTepg"
-             frameborder="0" 
-             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+             frameborder="0"
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
              allowfullscreen>
 </iframe>
 
@@ -27,7 +27,7 @@ _yay!_
 <img src="./img/publications/alphapilot.webp"/>
 <desc>Focuses on optimal control and trajectory planning for racing drones and was used in the development of the winning paper above.</desc>
 
-<p>Racing drones in use are agile autonomous platforms that operate at the limits of computational perception abilities while being at the edge of their aerodynamic flight envelopes. Such challenges make the field of autonomous drone racing prominent among research groups around the world. These races aim to push the boundaries of perception and control algorithms, while simultaneously mitigating the real-world uncertainty of execution on autonomous systems. While perception algorithms face challenges due to limited feature detection, high motion blur and computational requirements, control algorithms face challenges of planning trajectories that squeeze out every millisecond there is and still safely obeying those commands. This thesis addresses the challenge of control for racing, which is responsible for guiding drones to quickly design and track time-optimal trajectories for fast flights. </p> 
+<p>Racing drones in use are agile autonomous platforms that operate at the limits of computational perception abilities while being at the edge of their aerodynamic flight envelopes. Such challenges make the field of autonomous drone racing prominent among research groups around the world. These races aim to push the boundaries of perception and control algorithms, while simultaneously mitigating the real-world uncertainty of execution on autonomous systems. While perception algorithms face challenges due to limited feature detection, high motion blur and computational requirements, control algorithms face challenges of planning trajectories that squeeze out every millisecond there is and still safely obeying those commands. This thesis addresses the challenge of control for racing, which is responsible for guiding drones to quickly design and track time-optimal trajectories for fast flights. </p>
 
 <a href="https://repository.tudelft.nl/islandora/object/uuid%3A99f41ef5-f2c9-4a0a-9b89-0245e106f6de" target="_blank" rel="noopener noreferrer">Link</a> to the thesis.
 </div>
@@ -47,14 +47,14 @@ _yay!_
 <img src="./img/publications/proteus.webp"/>
 <desc>Paper presents an embedded system driving H-bridge configuration using charge pumps</desc>
 
-<p> After burning through a couple of motor drivers, quickly tried making one ourselves. N-channel MOSFETs and charge pumps together eliminate the problems of Dead time of MOSFETs and High values of RDS (ON). The embedded system using an ATMEL μC drives the load and monitors the voltages and input PWM to establish a closed loop system by comparing it with the stored threshold state space parameters of the motor, in turn preventing MOSFET damage by synchronized control over the gates.</p> 
+<p> After burning through a couple of motor drivers, quickly tried making one ourselves. N-channel MOSFETs and charge pumps together eliminate the problems of Dead time of MOSFETs and High values of RDS (ON). The embedded system using an ATMEL μC drives the load and monitors the voltages and input PWM to establish a closed loop system by comparing it with the stored threshold state space parameters of the motor, in turn preventing MOSFET damage by synchronized control over the gates.</p>
 
 <a href="https://ieeexplore.ieee.org/abstract/document/7443724/" target="_blank" rel="noopener noreferrer">Link</a> to the paper.
 </div>
 
 
 ### **- Other projects**
-Control and embedded systems interface for 
+Control and embedded systems interface for
 - [CNN-based Ego-Motion Estimation for Fast MAV Maneuvers](https://arxiv.org/abs/2101.01841)
 - [Neuromorphic control for optic-flow-based landings of MAVs using the Loihi processor](https://arxiv.org/abs/2011.00534).
 
@@ -69,13 +69,13 @@ Control and embedded systems interface for
 
 ## News
 
-- **AlphaPilot challenge**: 
+- **AlphaPilot challenge**:
     [Business Insider](https://markets.businessinsider.com/news/stocks/lockheed-martin-drone-racing-league-announce-a-i-robotic-racing-circuit-champions-give-team-1-million-cash-prize-for-fastest-autonomous-racing-drone-1028747953#), [Lockheed Martin](https://www.lockheedmartin.com/en-us/news/events/ai-innovation-challenge.html), [WIRED magazine](https://www.wired.com/story/coders-versus-human-pilots-drone-race/) and [Bloomberg](https://www.bloomberg.com/news/videos/2018-09-05/lockheed-martin-looks-to-drone-racing-for-the-next-advance-in-ai-video).
 
     <img src="./img/publications/65.webp" width="400px">
 
     &nbsp;
-  
+
 - **Undergrad robotics chapter**:
 
 
