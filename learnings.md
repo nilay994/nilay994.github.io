@@ -34,14 +34,14 @@ We skipped reading out from the current sensing pin of the motor drivers which u
 
 Another story with the software team now! Back in 2013, we moved away from bare metal firmware and started writing our own library for AtMegas, which enabled us to call functions instead of obscurely writing into registers. We called the library `sra.c`, while we had another `main.c`, which ran a single CPU task, with everything inside a `while(1)` and without any delay. CPU utilization? A 100%! To be honest, our toolchain and embedded board could do quite a lot - build firmware without extensive setups and flash it from a CLI onto an accessible ISP programming port. We could read out from ADCs with apt resolutions and sampling rates, connect PlayStation joysticks, write to 16x2 LCDs, set duty cycles for ESCs, servo motors, control pneumatic solenoids, switch H-Bridges and other I<sup>2</sup>C/SPI related peripherals. However, we completely missed the functionality to provide debouncing to our limit switches, smooth out our sensor measurements and most importantly use any instantiable data structures for each hardware component. Result?
 
-<iframe src="https://www.youtube.com/embed/XozfTtQIZjU?rel=0&amp;controls=0"
+<iframe src="https://www.youtube.com/embed/XozfTtQIZjU"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         align="left"
         style="padding: 10px"
         allowfullscreen>
 </iframe>
-<iframe src="https://www.youtube.com/embed/X-0vHquG6vE?rel=0&amp;controls=0"
+<iframe src="https://www.youtube.com/embed/X-0vHquG6vE"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         align="left"
@@ -51,7 +51,7 @@ Another story with the software team now! Back in 2013, we moved away from bare 
 
 <img src="./img/learnings/debounce.png" width="200px" style="padding: 10px"><br><em>Fig. 3: Bouncing recorded on the outputs of a commonly used button (source: BaldEngineer)</em>
 
-In the video above, we based the entire state machine of our code on reading **un**debounced switches, resulting in the robot falling off the poles.
+In the video on the left above, we based the entire state machine of our code based on reading **un**debounced switches, resulting in the robot falling off the poles. In the second video, Team A prototyped another robot which consisted of a bunch of servo motors and electromagnets - and it did work out for us.
 
 Another common failure was when we shared power rails between sensors and actuators and observed more noise while sampling sensors. We could only narrow down this problem years later because of absence of an oscilloscope (which by now should have been eminent that we couldn't afford). To peek into the issue, we were able to borrow one from our university lab (after a lot of paperwork). On connecting the oscilloscope to one of our sensor's pins, we were surprised to see a superimposed waveform on top of the sensor's analog signal. We could quickly identify that the waveform was originating from the switching PWM frequency of our motors. We used separated voltage rails and regulators with increased capacitance to solve this issue. The aforementioned "ghost clicks" in Fig. 3 could have also originated from the absence of debouncing, sampling at the CPU clock rate of 80 MHz and failing to isolate the switch's signal from the actuator's power supply rail. Would we have learned to trigger capture on the oscilloscope earlier, we'd have been able to diagnose, learn, patch and move on.
 
