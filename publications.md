@@ -4,7 +4,6 @@ title: "publications"
 ---
 
 # Publications
-_yay!_
 
 <div class="publ">
 <h3>- Artificial Intelligence behind the winning entry to the 2019 AI Robotic Racing Competition</h3>
