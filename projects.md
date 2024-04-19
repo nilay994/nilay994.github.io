@@ -8,7 +8,7 @@ title: "projects"
 
 ***A few pictures in the slides below are hyperlinked, so click away on the moving pictures if you like the project! :P***
 
-## Hydrogen fuel cell systems (2022)
+## Hydrogen fuel cell systems (2021-2023)
 Electric vehicles offer a zero-emission power promise. However the prevailing challenges related to battery sizing, sustainable battery manufacturing and charging time appear when EVs are used for heavy duty applications. Bigger batteries for heavy duty applications increase the weight of the vehicle significantly, in turn decreasing the range.
 
 Hydrogen, being one of the most energy dense & lightest elements, scales reasonably with a bigger power demand, is quick to refuel and reduces reliance on big batteries while still living upto the zero emission promise. In a fuel cell system, as hydrogen and oxygen combine to produce water, both electricity & heat are released. Electricity is used to power the vehicle & heat can be used to condition the temperature in the vehicle.
@@ -25,7 +25,7 @@ Make drones fly at the limits of flight to finish a race in the shortest time, a
 
 &nbsp;
 
-## Percevite (2019)
+## Percevite (2020)
 [PercEvite](https://percevite.org): Sense and Avoid for small + unmanned aerial vehicles. Each drone is its own Air Traffic control. Project under [Single European Sky Initiative (SESAR)](https://www.sesarju.eu/projects/percevite).
 
 {% include projects/slider_proj_2.html %}
