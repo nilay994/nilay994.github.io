@@ -167,6 +167,15 @@ ul.downloads {
   }
 }
 
+.learn {
+  iframe {
+    position: relative;
+    width: 45%;
+    aspect-ratio: 1.7;
+    white-space: nowrap;
+  }
+}
+
 .downloads li:first-child a {
   border-radius:5px 0 0 5px;
 }
