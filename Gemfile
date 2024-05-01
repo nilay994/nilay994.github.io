@@ -6,3 +6,5 @@ gem 'jekyll-feed'
 gem 'jekyll-seo-tag'
 
 gemspec
+
+gem "webrick", "~> 1.8"
