@@ -53,6 +53,10 @@ If we rollout one sample too early and replace the 0.12 term by $\alpha$, the fi
 
 $$y[n+1] = \alpha x[n] + (1 - \alpha) y[n]$$
 
+Assuming a zero-order-hold (ZOH) discretization, the calculation of $\alpha$ goes as ([ref](https://controlsystemsacademy.com/0020/0020.html)):
+
+$$\alpha = 1 - e^{- 2 \pi f_c / f_s}$$
+
 ### Filter characteristics
 With this implementation, $y[n]$ is guaranteed to remain bounded if $x[n]$ remains bounded and $\alpha \in (0,1)$, which translates to the requirement of the z-domain pole to lying inside the unit circle. Although not favorable, unexpected delays (latency/jitter) while sampling input $x[n]$ also keeps the filter bounded if the prior conditions are met.
 
@@ -90,9 +94,13 @@ float lpf1_run(filter_lpf1_t * filt, float in);
 /**
  * @file iir.c
  */
-void lpf1_init(filter_lpf1_t * filt, float fs, float fc)
+
+#include <math.h>
+
+void lpf1_init(filter_lpf1_t * filt, float fc, float fs)
 {
-    /* TODO */
+	filt->out = 0.0f;
+	filt->alpha = 1.0f - expf(-2.0f * M_PI * fc / fs);
 }
 
 float lpf1_run(filter_lpf1_t * filt, float in)
@@ -108,18 +116,18 @@ float lpf1_run(filter_lpf1_t * filt, float in)
  */
 #include "filters/iir.h"
 
-/* 500Hz */
-#define SENSING_RATE 2
-/* 20 Hz */
-#define ACTUATION_RATE 50
+/* 500 Hz, 2 ms */
+#define SENSING_RATE 2.0f
+/* 20 Hz, 50 ms */
+#define ACTUATION_RATE 50.0f
 
 static filter_lpf1_t filt[2] = {0};
 static float sensor_1_filt, sensor_2_filt;
 
 void init()
 {
-    filt[0].alpha = 0.12f; // fc: 10Hz, tr: 35ms
-    filt[1].alpha = 0.5f;  // fc: 55Hz, tr: 6ms
+	lpf1_init(&filt[0], 10.0f, 1e3f / SENSING_RATE); // fc: 10 Hz, tr: 35 ms
+	lpf1_init(&filt[1], 55.0f, 1e3f / SENSING_RATE); // fc: 55 Hz, tr: 6 ms
 }
 
 void loop()
@@ -145,7 +153,7 @@ void loop()
 &nbsp;
 
 ## Butterworth filters
-This is yet another type of IIR filter. The above first-order filter might be inadequate for they are only able to suppress the 20 Hz sine wave to half of its amplitude, even if it was outside the cutoff frequency of 10 Hz (ref. Fig. 1). In such cases, a second order Butterworth filter can be used for better suppression. They are known for their good roll-off rates and also being equally sensitive to all frequencies in the passband. They require a few more coefficients than just an `alpha` that I mention above. These coefficients might need to be borrowed from an online filter design tool since it is not straightforward to calculate it analytically.
+This is yet another type of IIR filter. The above first-order filter might be inadequate for they are only able to suppress the 20 Hz sine wave to half of its amplitude, even if it was outside the cutoff frequency of 10 Hz (ref. Fig. 1). In such cases, a second order Butterworth filter can be used for better suppression. They are known for their good roll-off rates and are also equally sensitive to all frequencies in the passband. They require a few more coefficients than just the `alpha` that I mentioned above. These coefficients might need to be borrowed from an online filter design tool since it is not straightforward to calculate them analytically.
 
 ### Results
 The input is a sinewave and has around 10% uniform noise and a 20% DC offset augmented on top. This measurement is sampled at 20 kHz. There are two filters in use below (applied sequentially on the measurement). It consists of a low pass filter with a cutoff of 1 kHz followed by a high pass filter with a cutoff of 30 Hz.
@@ -284,9 +292,9 @@ void main()
 		float filt_volt_meas = bw2_filt_run(&lpf_1kHz, volt_meas);
 		// then HPF
 		filt_volt_meas = bw2_filt_run(&hpf_30Hz, filt_volt_meas);
-    }
+	}
 
-    fclose(filt_fp);
+	fclose(filt_fp);
 }
 ```
 
@@ -296,4 +304,4 @@ void main()
 - [Jason Sachs](https://www.embeddedrelated.com/showarticle/779.php)
 - [Phil's lab](https://philsal.co.uk/)
 
-Thanks to [Neel Nagda](https://github.com/neel-stark) for helping with the fundamentals of this approach 🥳.
+Thanks to [Neel Nagda](https://www.linkedin.com/in/neelnagda/) and [Laurence Willemet](https://www.linkedin.com/in/laurence-willemet-679a1310a/) for helping with the implementation of this approach 🥳.
