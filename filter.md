@@ -58,7 +58,7 @@ Assuming a zero-order-hold (ZOH) discretization, the calculation of $\alpha$ goe
 $$\alpha = 1 - e^{- 2 \pi f_c / f_s}$$
 
 ### Filter characteristics
-With this implementation, $y[n]$ is guaranteed to remain bounded if $x[n]$ remains bounded and $\alpha \in (0,1)$, which translates to the requirement of the z-domain pole to lying inside the unit circle. Although not favorable, unexpected delays (latency/jitter) while sampling input $x[n]$ also keeps the filter bounded if the prior conditions are met.
+With this implementation, $y[n]$ is guaranteed to remain bounded if $x[n]$ remains bounded and $\alpha \in (0,1)$, which translates to the requirement of the z-domain pole to lying inside the unit circle. Although not favorable, unexpected delays (latency/jitter) while sampling input $x[n]$ also keep the filter bounded if the prior conditions are met.
 
 <p style="text-align:center">
 <img src="./img/filter/filter_2/filter_2.png" width="300px">
@@ -71,7 +71,7 @@ With this implementation, $y[n]$ is guaranteed to remain bounded if $x[n]$ remai
 - A bode plot of the continuous time filter shows the half-power (-3dB) gain and -45° phase lag as expected. Figure 1 already shows the gain to be halved after cut-off frequency. The phase delay for any periodic signal going through is also straightforward to calculate. A `bode` plot is nothing but values of `magnitude` and `phase` of the filter after substituting $s = j\omega$ in $H(s)$. i.e. For a signal of $1Hz$,
 $$H(s) = H(j\omega) = \frac{1}{1+0.1j} \approx 1 \angle -5.71^{\circ}$$
 - The phase plot in the `bode` figure above hints that there is a phase lag of 5.71° for a periodic signal of $1Hz$. For such a signal, a delay of 1 second would mean 360° of phase shift. Hence for 5.71° of phase shift, there is a delay of $\approx 0.0158s$ from the input signal.
-- Group delay characteristics hint how much signals with different periodicities are delayed when they pass through this IIR filter. For a signal of $1Hz$, the plot below indicates around 8.4 samples of delay $\approx(8.4 * 2ms) \approx 0.0166s$, which is approximately the phase shift calculated above. If music signals were to pass through this filter, individual frequencies in the wide-band signal would be differently delayed, possibly unfavorably distorting the music. This highlights the primary shortcoming of IIR filters, i.e. its non-linear phase response. This shortcoming could then be resolved by using an FIR filter. At the expense of more computations, it offers a linear phase response and almost a constant time delay regardless of the frequency of input signals.
+- Group delay characteristics hint at how much signals with different periodicities are delayed when they pass through this IIR filter. For a signal of $1Hz$, the plot below indicates around 8.4 samples of delay $\approx(8.4 * 2ms) \approx 0.0166s$, which is approximately the phase shift calculated above. If music signals were to pass through this filter, individual frequencies in the wide-band signal would be differently delayed, possibly unfavorably distorting the music. This highlights the primary shortcoming of IIR filters, i.e. its non-linear phase response. This shortcoming could then be resolved by using an FIR filter. At the expense of more computations, it offers a linear phase response and almost a constant time delay regardless of the frequency of input signals.
 
 ### C-implementation 💻
 Implementing the first-order low-pass infinite impulse response filter in `C` was quite straightforward. Back then, we could get away without making header files or holding an instance of the states of the filter like the example below. The filter was used only at a single place and the states for us were just declared as `static` inside the function (which looking back wasn't smart or scale-able). The source below (`main.c`) has undefined platform-specific calls, which could be replaced for your case.
@@ -82,8 +82,8 @@ Implementing the first-order low-pass infinite impulse response filter in `C` wa
  */
 
 typedef struct {
-    float out;
-    float alpha;
+	float out;
+	float alpha;
 } filter_lpf1_t;
 
 void lpf1_init(filter_lpf1_t * filt, float fs, float fc);
@@ -105,8 +105,8 @@ void lpf1_init(filter_lpf1_t * filt, float fc, float fs)
 
 float lpf1_run(filter_lpf1_t * filt, float in)
 {
-    filt->out = filt->alpha * in + (1 - filt->alpha) * filt->out;
-    return filt->out;
+	filt->out = filt->alpha * in + (1 - filt->alpha) * filt->out;
+	return filt->out;
 }
 ```
 
@@ -132,17 +132,17 @@ void init()
 
 void loop()
 {
-    uint64_t ms_count = get_millis();
+	uint64_t ms_count = get_millis();
 
-    /* Sensing loop */
-    if ((ms_count % SENSING_RATE) == 0u) {
-        sensor_1_filt = lpf1(&filt[0], analog_read(A4));
-        sensor_2_filt = lpf1(&filt[1], analog_read(A5));
-    }
+	/* Sensing loop */
+	if ((ms_count % SENSING_RATE) == 0u) {
+		sensor_1_filt = lpf1(&filt[0], analog_read(A4));
+		sensor_2_filt = lpf1(&filt[1], analog_read(A5));
+	}
 
-    /* Control loop */
-    if ((ms_count % ACTUATION_RATE) == 0u) {
-    }
+	/* Control loop */
+	if ((ms_count % ACTUATION_RATE) == 0u) {
+	}
 }
 ```
 
