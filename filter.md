@@ -166,7 +166,9 @@ It can be observed how the low pass filter removes the uniform noise and a smoot
 
 ```c
 /**
- * @file butterworth.c
+ * @file butterworth.h
+ *
+ * @brief Functions towards a second order butterworth filter
  */
 
 struct bw2_filt {
@@ -193,6 +195,35 @@ struct bw2_filt {
  * @param coeff_b Co-efficients associated with the input signal
  * @param coeff_a Co-efficients associated with the output signal
 */
+void bw2_filt_init(struct bw2_filt * f, const float coeff_b[3], const float coeff_a[3]);
+
+
+/**
+ * Runs a 2nd order butterworth filter on the passed measurement
+ *
+ * A second order Butterworth filter can be expressed as:
+ *
+ *   (a[2] * y[2] + a[1] * y[1] + a[0] * y[0])
+ * = (b[2] * x[2] + b[1] * x[1] + b[0] * x[0])
+ *
+ * @param f  Pointer to filter's struct
+ * @param in Input signal
+ * @return Output signal
+ */
+float bw2_filt_run(struct bw2_filt * f, float in);
+
+```
+
+
+```c
+/**
+ * @file butterworth.c
+ *
+ * @brief Implements a second order butterworth filter
+ */
+
+#include "butterworth.h"
+
 void bw2_filt_init(struct bw2_filt * f, const float coeff_b[3], const float coeff_a[3])
 {
 	f->b[2] = coeff_b[2];
@@ -213,18 +244,6 @@ void bw2_filt_init(struct bw2_filt * f, const float coeff_b[3], const float coef
 }
 
 
-/**
- * Runs a 2nd order butterworth filter on the passed measurement
- *
- * A second order Butterworth filter can be expressed as:
- *
- *   (a[2] * y[2] + a[1] * y[1] + a[0] * y[0])
- * = (b[2] * x[2] + b[1] * x[1] + b[0] * x[0])
- *
- * @param f  Pointer to filter's struct
- * @param in Input signal
- * @return Output signal
- */
 float bw2_filt_run(struct bw2_filt * f, float in)
 {
 	// shift history by one
@@ -249,6 +268,39 @@ float bw2_filt_run(struct bw2_filt * f, float in)
 ```c
 /**
  * @file main.c
+ * @brief Generates a noisy and a filtered sinewave
+ */
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "butterworth.h"
+
+// check if already defined in math.h
+#define M_PI 3.142f
+
+/**
+ * Emulates a sinewave for test purposes
+ *
+ * Characteristics:
+ *  - Amplitude: 1V
+ *  - Freq: 50 Hz
+ *  - Noise augmented: 10%
+ *  - DC bias augmented: 20%
+ *
+ * @param t Elapsed time
+ * @return Sample of the sinewave at time t
+ */
+float gen_50hz_sinewave(float t)
+{
+	float wave = 0.2f + sin(2.0f * M_PI * 50.0f * t);
+	wave += 0.1f * (((float)(rand()) / (float)(RAND_MAX)) - 0.5f);
+	return wave;
+}
+
+
+/**
+ * Main function
  */
 void main()
 {
@@ -257,7 +309,7 @@ void main()
 	float t = 0.0f;   // elapsed time (s)
 
 	// open files for logging
-	FILE * filt_fp, * est_fp;
+	FILE * filt_fp;
 	filt_fp = fopen("filt.csv", "w+");
 
 	// initialize a low pass filter via [b, a] = butter(2, 1000/(20000/2), 'low');
@@ -292,6 +344,9 @@ void main()
 		float filt_volt_meas = bw2_filt_run(&lpf_1kHz, volt_meas);
 		// then HPF
 		filt_volt_meas = bw2_filt_run(&hpf_30Hz, filt_volt_meas);
+
+		// save results to files
+		fprintf(filt_fp, "%f, %f, %f\n", t, volt_meas, filt_volt_meas);
 	}
 
 	fclose(filt_fp);
