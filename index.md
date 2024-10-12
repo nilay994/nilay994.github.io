@@ -6,7 +6,7 @@ layout: default
 
 &nbsp;
 
-An **engineer** with Fugro's innovation team, developing underwater robots for exploring underwater terrains, providing characterization for offshore energy projects and aiding marine biodiversity research.
+An **engineer** with Fugro's innovation team, developing robots for exploring underwater terrains, aiding offshore energy and biodiversity research.
 
 Previously worked at zepp.solutions, writing software for hydrogen fuel-cell systems and a zero-emission future. Prior, worked with Lockheed Martin / TU Delft for making drones fly faster than ever. Also worked with Espressif Systems in Shanghai to write device drivers and firmware for their popular ESP32 chip.
 
