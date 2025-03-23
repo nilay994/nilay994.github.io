@@ -135,9 +135,22 @@ During AlphaPilot, we had our very first flight scheduled at MIT's AeroAstro lab
 
 The senates of the robotics chapter were responsible for propagating the knowledge they gathered under the mentorship of the batches before them. Most years also saw revolutionary projects that changed the narrative of robotics at the university for years to come. Talking about our seniors, the batch of 2014 and 2015 - they found a way to secure a constant revenue stream for the society. In days when the society's bank accounts ran dry, with no sponsorship or institutional support, this constant revenue stream meant everything to us. The idea was a workshop-based revenue model: Teach robotics, sell robotics kits and earn money. It was simple, more robotics workshops = more funds. After winning at Robocon in the national leagues we were in urgent need of funds to build competent robots for the international leagues. Batch of 2014 quickly started a new company under which a 1-week robotics workshop could be given to around 300 students in and around the city. Fees were still kept mindful to allow everyone to have access to such fun robot-building knowledge. And the efforts pulled off, the marginal profits from the workshops were enough to source components for our new robots from all over the world! That batch's entrepreneurial ability at such a young age was contagious. We continued it for the years to come and improvised upon it. With batch manufacturing, inventory management,  beginner-friendly PCB designs and fun slides to keep workshops interesting after lunch - we've been better each year.
 
+## Learning 5: Victory & breathing
+The wins could go on - Robocon, AlphaPilot, and what not. All the handshakes, blinding flashlights and media interviews could have left me feeling elated. But, after these fleeting celebrations, I’d often be left with a strange emptiness, pondering why the wins didn’t leave me feeling proud or victorious as they should.
+
+Did I not deserve it? Did I not work hard enough? Am I not having someone to share these with? Possibly true, but something deeper was at play - something that made the world’s applause feel hollow while I stood there, searching for meaning in it.
+
+Years later, I think I have the answer. I realized that victory in its truest sense is not **because** of something, but **despite** of something.
+
+The world usually celebrates the *reasons* behind our victory. A news article highlights how you outperformed the competition. A high-impact journal details the sophisticated techniques behind your success. But these only capture the fact that a win happened on so-and-so day, in so-and-so way. They do not capture *how* a victory is trully felt.
+
+I believe that victory in its truest form is in what you’ve endured **despite**, and not **because** of the circumstances. When your compassionate self realizes all what you've braved through. Disappointments that came in instead of hope. Ignorance from the society. Biking back in a cold dark night. Walking alone. Being naive about climbing the mountain bare handed. The sting of abondandonment, or if unlucky, even betrayal, from a meaningful relationship. The grief of losing a family member.
+
+Because to even survive with a beating heart and breathe after going through so much - in itself, is victory. It is not felt so much from the appreciation or the accolades. It is felt by realizing what you've braved through. And, only with such a perspective, can we rekindle some compassion towards our very-much alive self.
+
 ## General learnings
 
-A few general lessons that I could pick from this experience were:
+A few general lessons that I could pick from these experiences were:
 - Planning is essential. When goals get stressful, it is important to plan more in the short term. Summarizing today and planning tomorrow. Taking it by the day. Long-term visions can be held, but short-term goals are the only ways to achieve them.
 - Finding ways to challenge everyday by searching outside the bubble of the mundane. Getting mentorship. Breaking the unguided inertia.
 - Questioning the solution and striving to find answers everyday. Evaluating and failing fast. Having the guts to restart from scratch.

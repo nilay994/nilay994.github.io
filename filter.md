@@ -359,4 +359,4 @@ void main()
 - [Jason Sachs](https://www.embeddedrelated.com/showarticle/779.php)
 - [Phil's lab](https://philsal.co.uk/)
 
-Thanks to [Neel Nagda](https://www.linkedin.com/in/neelnagda/) and [Laurence Willemet](https://www.linkedin.com/in/laurence-willemet-679a1310a/) for helping with the implementation of this approach 🥳.
+Thanks to [Neel Nagda](https://www.linkedin.com/in/neelnagda/) for helping with the implementation of this approach 🥳.
